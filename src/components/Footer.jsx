@@ -47,7 +47,7 @@ export default function Footer() {
 
           {/* CONTACT */}
           <div className=' lg:flex flex-col items-center gap-[clamp(1rem,2vw,2rem)] py-2'>
-            <button className="px-[clamp(1rem,2vw,2rem)] py-[clamp(0.5rem,1vw,1rem)] text-[clamp(0.85rem,1.5vw,1rem)] rounded-full bg-black text-white font-medium hover:bg-teal-500 transition cursor-pointer">
+            <button className="px-[clamp(1rem,2vw,2rem)] py-[clamp(0.5rem,1vw,1rem)] text-[clamp(0.85rem,1.5vw,1rem)] rounded-full bg-black text-white font-medium hover:bg-gray-700 transition cursor-pointer">
               Request a call
             </button>
 

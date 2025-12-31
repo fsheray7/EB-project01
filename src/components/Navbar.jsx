@@ -15,7 +15,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="w-full border-b border-dashed border-blue-300 bg-white relative z-50">
+    <nav className="w-full  bg-white relative z-50">
       <div className="mx-auto px-[clamp(1rem,4vw,10rem)]">
         <div className="h-[clamp(60px,8vw,100px)] flex items-center justify-between">
 
@@ -51,11 +51,11 @@ export default function Navbar() {
           </ul>
 
           {/* DESKTOP RIGHT */}
-          <div className="hidden lg:flex items-center gap-[clamp(0.5rem,2vw,2rem)]">
+          <div className="hidden lg:flex justify-center mb-4 items-center gap-[clamp(0.5rem,1vw,2rem)]">
             <button
               onClick={handleLogin}
-              className="px-[clamp(1rem,2vw,2rem)] py-[clamp(0.5rem,1vw,1rem)]
-                         text-[clamp(0.85rem,1.5vw,1.25rem)]
+              className="px-[clamp(1rem,1.5vw,2rem)] py-[clamp(0.5rem,0.5vw,1rem)]
+                         text-[clamp(0.85rem,1vw,1.25rem)]
                          rounded-full bg-teal-400 text-white font-medium
                          hover:bg-teal-500 transition"
             >
@@ -65,7 +65,7 @@ export default function Navbar() {
             <img
               src={cartImage}
               alt="cart"
-              className="w-[clamp(1.5rem,3vw,3rem)] h-[clamp(1.5rem,3vw,3rem)] cursor-pointer"
+              className="w-[clamp(1.5rem,2vw,3rem)] h-[clamp(1.5rem,2vw,3rem)] cursor-pointer"
             />
           </div>
 
@@ -105,10 +105,10 @@ export default function Navbar() {
             <button
               onClick={handleLogin}
               className="mt-[clamp(1rem,2vw,2rem)] w-fit
-                         px-[clamp(1rem,2vw,2rem)]
-                         py-[clamp(0.5rem,1vw,1rem)]
+                         px-[clamp(1rem,1vw,1rem)]
+                         py-[clamp(0.5rem,0.7vw,1rem)]
                          rounded-full bg-teal-400 text-white
-                         text-[clamp(0.9rem,1.5vw,1.2rem)]
+                         text-[clamp(0.9rem,1vw,1.2rem)]
                          font-medium"
             >
               SIGN IN
@@ -118,7 +118,7 @@ export default function Navbar() {
           <img
             src={cartImage}
             alt="cart"
-            className="mr-3 mt-4 w-[clamp(1.5rem,3vw,3rem)]
+            className="mr-3 mt-4 w-[clamp(1.5rem,2vw,3rem)]
                        h-[clamp(1.5rem,3vw,3rem)] cursor-pointer"
           />
         </div>
