@@ -2,7 +2,7 @@ import React from "react";
 import { useGoogleLogin } from "@react-oauth/google";
 import { PublicClientApplication } from "@azure/msal-browser";
 import { MsalProvider, useMsal } from "@azure/msal-react";
-import googleIcon from "../assets/images/google.png";
+import googleIcon from "../assets/images/Google.png";
 import microsoftIcon from "../assets/images/microsoft.png";
 
 /* ======================
