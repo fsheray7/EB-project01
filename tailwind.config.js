@@ -2,9 +2,9 @@ export default {
   theme: {
     extend: {
       screens: {
-        'qhd': '2560px',      // 2K resolution
-        'uhd': '3840px',      // 4K resolution
-        'ultrawide': '3440px', // 21:9 ultrawide
+        '3xl': '1920px',   // Ultra-wide
+        '4xl': '2560px',   // 2K / iMac
+        '5xl': '3200px',   // Super ultra-wide
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
