@@ -16,10 +16,11 @@ const paginationStyles = `
     position: relative !important;
   }
   .carousel-pagination .swiper-pagination-bullet {
-    background-color: #000000ff;
+    background-color: #000000 !important;
+    opacity: 1 !important;
   }
   .carousel-pagination .swiper-pagination-bullet-active {
-    background-color: #FFC700;
+    background-color: #D8A85B !important;
   }
 `;
 import image2 from "../assets/images/image2.png";
@@ -32,7 +33,7 @@ const slides = [
 
 function CarouselCard() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#F6F6F6]">
+    <section className="mt-22 w-full overflow-hidden ">
       <style>{paginationStyles}</style>
       <div
         className="

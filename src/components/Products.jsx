@@ -37,9 +37,10 @@ export default function FeaturedProducts() {
       {/* Header */}
       <div className="flex items-center justify-between mb-8">
         <h2
-          className=" px-4
-            font-semibold text-[#f0a23a]
-            text-[clamp(1.5rem,3vw,4rem)]
+          className=" 
+            font-semibold text-[#D8A85B]
+            text-[25px]
+            md:text-[30px]
           "
         >
           Featured Product
@@ -49,8 +50,8 @@ export default function FeaturedProducts() {
           href="#"
           className="
             flex items-center gap-1
-            text-gray-600 hover:text-gray-900
-            text-[clamp(0.85rem,1.4vw,2rem)]
+            text-[#000000] font-semibold
+            text-[14px]
           "
         >
           View all →
@@ -88,7 +89,7 @@ export default function FeaturedProducts() {
             <h3
               className="
                 font-medium text-gray-900
-                text-[clamp(0.9rem,1.4vw,2.2rem)]
+                text-md
               "
             >
               {product.title}
@@ -97,8 +98,8 @@ export default function FeaturedProducts() {
             {/* Price */}
             <p
               className="
-                mt-1 font-semibold text-gray-800
-                text-[clamp(0.9rem,1.3vw,2.2rem)]
+                mt-1 font-bold text-[#4A4A4A]
+                text-[16px]
               "
             >
               {product.price}
@@ -107,16 +108,16 @@ export default function FeaturedProducts() {
             {/* Button */}
             <button
               className="
-                mt-4 w-full
-                border border-[#f0a23a]
-                text-[#f0a23a]
+                mt-4 px-4
+                border border-[#A37E65]
+                text-[#A37E65]
                 rounded-full
                 hover:bg-[#f0a23a]
                 hover:text-white
                 transition
-
-                py-[clamp(0.45rem,0.8vw,1.2rem)]
-                text-[clamp(0.85rem,1.3vw,2rem)]
+                font-bold
+                py-2
+                text-[14px]
               "
             >
               Add to cart
@@ -127,8 +128,8 @@ export default function FeaturedProducts() {
               href="#"
               className=" flex items-center justify-center gap-2 
                 mt-3 block
-                text-gray-500 hover:text-gray-700
-                text-[clamp(0.75rem,1.1vw,1.6rem)]
+                text-[#000000] hover:text-gray-700
+                  text-[12px]
               "
             >
               View Details <span ><FaEye /></span>
