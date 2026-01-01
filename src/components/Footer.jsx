@@ -64,7 +64,9 @@ export default function Footer() {
               {[FaAmazon, FaWhatsapp, FaFacebookF, ].map((Icon, i) => (
                 <div
                   key={i}
-                  className="flex px-[clamp(1rem,2vw,1rem)] py-[clamp(1rem,2vw,1rem)] text-[clamp(1rem,1.5vw,1rem)] items-center justify-center rounded-full border border-[black]  text-white cursor-pointer hover:bg-[#e29301] bg-[#D9A441]"
+                  className="flex px-[clamp(1rem,2vw,1rem)] py-[clamp(1rem,2vw,1rem)] text-[clamp(1rem,1.5vw,1rem)] items-center justify-center
+                  
+                  rounded-full border border-[black]  text-white cursor-pointer hover:bg-[#e29301] bg-[#D9A441]"
                 >
                   <Icon size={20} />
                 </div>
@@ -78,14 +80,31 @@ export default function Footer() {
       
         <div className="flex mt-12 flex-col gap-6 lg:flex-row md:flex-row lg:items-center lg:justify-between">
           
-          <h3 className="w-full text-2xl font-bold  text-[clamp(2rem,1.5vw,4rem)]  text-white">
+          <h3 className="w-full  font-bold 
+           text-[clamp(1rem,1.5vw,2rem)]
+           md:text-[clamp(1.5rem,1vw,2rem)]
+           lg:text-[clamp(2rem,1.5vw,4rem)]
+           xl:text-[clamp(2rem,1.5vw,4rem)]
+             text-white">
             Get 10% off your first order plus <br /> expert dog health tips.
           </h3>
 
           <div className= " border border-white relative mt-10 flex w-full  text-[clamp(1rem,1.5vw,2rem)] items-center rounded-[18px] border-[2px solid white] bg-white/20 px-4 py-5 backdrop-blur">
-          <h2 className='absolute bottom-25 2xl:bottom-30 z-100 font-bold text-white' >Join The Pack</h2>
+          <h2 className='absolute 
+           text-lg
+          bottom-20
+          sm:bottom-18
+          md:bottom-20
+          lg:bottom-25
+          xl:bottom-25
+           2xl:bottom-30 z-100 font-bold text-white' >Join The Pack</h2>
           <p 
-      className="absolute top-[-clamp(1rem,1vw,2.2rem)] left-[clamp(1rem,2vw,2rem)] text-[clamp(0.75rem,1vw,1rem)] 2xl:text-[clamp(0.75rem,1vw,1.5rem)] bottom-12 lg:bottom-16 text-white  uppercase"
+      className="absolute top-[-clamp(1rem,1vw,2.2rem)] left-[clamp(1rem,2vw,2rem)] text-[clamp(0.75rem,1vw,1rem)] 2xl:text-[clamp(0.75rem,1vw,1.5rem)] bottom-12
+       sm:bottom-13
+       md:bottom-14
+       lg:bottom-15
+       xl:bottom-16
+        text-white  uppercase"
     >
       YOUR EMAIL
     </p>

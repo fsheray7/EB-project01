@@ -33,6 +33,12 @@ function PricingSection() {
                 relative
                 w-[320px]
                 h-[400px]
+                md:w-[250px]
+                md:h-[350px]
+                lg:w-[320px]
+                lg:h-[400px]
+                w-[320px]
+                h-[400px]
                 rounded-[28px]
                 bg-gradient-to-b from-[#B894FF] via-[#9C79F2] to-[#6A3FC6]
                 px-8
@@ -40,6 +46,7 @@ function PricingSection() {
                 flex flex-col
                 items-center
                 text-center
+                
               "
             >
               {/* Title */}
@@ -78,9 +85,16 @@ function PricingSection() {
                   bg-[#E2B35E]
                   text-black
                   font-semibold
-                  text-sm
-                  px-10
+                  text-xs
+                  md:text-sm
+                  lg:text-sm
+                  xl:text-sm
+                  w-30
                   py-3
+                  md:w-40
+                  lg:w-50
+                  xl:w-50
+                  
                   rounded-full
                   shadow-md
                   hover:opacity-90

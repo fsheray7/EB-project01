@@ -16,7 +16,19 @@ function Banner() {
       />
 
       {/* Main Container */}
-      <div className="relative z-10  md:min-h-[562px] flex items-center justify-between px-6 lg:px-20">
+      <div className="relative z-10 
+
+       min-h-[300px]
+       sm:min-h-[340px]
+       md:min-h-[592px]
+       lg:min-h-[680px]
+       xl:min-h-[650px]
+        flex items-center justify-between 
+        mt-1
+        md:mt-6
+        lg:mt-4
+        xl:mt-6
+         px-10 md:px-4 lg:px-10 xl:px-10">
 
         {/* Desktop Dog Image */}
         <div className="hidden md:block absolute md:bottom-0  left-0">
@@ -35,10 +47,12 @@ function Banner() {
           <h1
             className="
               text-[#F4D06F]
-        
+            
               leading-tight
-
-              text-[80px]
+              text-[30px]
+              md:text-[50px]
+              lg:text-[80px]
+              xl:text-[90px]
             "
           >
             Daily wellness,
@@ -55,13 +69,14 @@ function Banner() {
               mt-4
               font-poppins
               text-white/90
-              text-base
+              text-xs
               sm:text-base
+              lg:text-base
               md:text-[clamp(1.1rem,1.3vw,1.8rem)]
               leading-relaxed
             "
           >
-            Premium, science-backed supplements for your dog. <br />
+            Premium, science-backed supplements for your dog.
             Subscribe today and save 15% on every order.
           </p>
 
@@ -75,9 +90,18 @@ function Banner() {
               hover:bg-gray-100
               transition
               cursor-pointer
-             py-[12px]
-             px-[30px]
+              py-[6px]
+              px-[20px]
+             md:py-[12px]
+             md:px-[30px]
+             lg:py-[12px]
+             lg:px-[30px]
+             xl:py-[12px]
+             xl:px-[30px]
+              text-[clamp(1rem,1vw,1rem)]
               md:text-[clamp(1rem,1.4vw,2.2rem)]
+              lg:text-[clamp(1rem,1.4vw,2.2rem)]
+              xl:text-[clamp(1rem,1.4vw,2.2rem)]
             "
           >
             Shop Now <span className="text-lg">→</span>
@@ -90,7 +114,9 @@ function Banner() {
         <img
           src={dogImage}
           alt="Dog"
-          className="w-[358px] h-[308px] object-contain"
+          className="w-[220px] h-[130px] 
+         
+          object-contain"
         />
       </div>
     </section>
