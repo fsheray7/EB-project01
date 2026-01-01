@@ -59,7 +59,7 @@ function FAQSection() {
               text-[clamp(0.9rem,1.5vw,2.2rem)]
             "
           >
-            We’ve gathered the most common questions to help you
+            We’ve gathered the most common questions to help you <br />
             understand how Wellfetch works
           </p>
         </div>
@@ -70,10 +70,10 @@ function FAQSection() {
             <div
               key={index}
               className={`
-                rounded-lg border transition-all duration-300
+                rounded-lg border-2 transition-all duration-300
                 ${
                   activeIndex === index
-                    ? "bg-gradient-to-r from-[#d83b64] to-[#b8325a] text-white border-transparent"
+                    ? "bg-gradient-to-r from-[#d83b64] to-[#b8325a] text-white border-red-600"
                     : "bg-white border-gray-200"
                 }
               `}
@@ -90,10 +90,10 @@ function FAQSection() {
                 "
               >
                 <span
-                  className="
-                    font-medium
+                  className={`
                     text-[clamp(0.9rem,1.5vw,2.3rem)]
-                  "
+                    ${activeIndex === index ? "text-yellow-600 font-semibold" : "text-gray-900"}
+                  `}
                 >
                   {item.question}
                 </span>
@@ -107,8 +107,8 @@ function FAQSection() {
                     text-[clamp(1rem,1.4vw,2rem)]
                     ${
                       activeIndex === index
-                        ? "border-white text-white"
-                        : "border-gray-400 text-gray-600"
+                        ? "border-red text-yellow-500"
+                        : "border-gray-400 text-white-600"
                     }
                   `}
                 >
@@ -122,7 +122,7 @@ function FAQSection() {
                   className="
                     px-[clamp(1rem,2vw,3rem)]
                     pb-[clamp(0.8rem,1.6vw,2.5rem)]
-                    text-white/90
+                    text-yellow/90
                     text-[clamp(0.85rem,1.4vw,2.1rem)]
                   "
                 >

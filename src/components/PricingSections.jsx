@@ -1,96 +1,98 @@
 import React from "react";
+import { FaCheck } from "react-icons/fa";
 
 const plans = [
-  {
-    title: "Monthly Plan",
-    price: "$29/Month",
-  },
-  {
-    title: "Quarterly Plan",
-    price: "$79/Month",
-  },
-  {
-    title: "Annual Plan",
-    price: "$279/Month",
-  },
+  { title: "Monthly Plan", price: "$29/Month" },
+  { title: "Quarterly Plan", price: "$79/Month" },
+  { title: "Annual Plan", price: "$279/Month" },
 ];
 
 function PricingSection() {
   return (
-    <section className="w-full bg-[#0B0F1A] py-16 px-4">
-      <div className="w-full  ">
+    <section className="w-full bg-[#0B0F1A] py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+
         {/* Heading */}
-      <div className="text-center mb-12">
-          <h2
-            className="
-              text-white font-semibold leading-tight
-              text-[clamp(1.6rem,3.5vw,4.5rem)]
-            "
-          >
-            Get Monthly Deliveries and
-            <br className="hidden sm:block" /> Save More
+        <div className="text-center mb-16">
+          <h2 className="text-white  text-[clamp(1.8rem,3vw,3.2rem)]">
+            Get Monthly Deliveries and <br /> Save More
           </h2>
 
-          <p
-            className="
-              mt-3 mx-auto text-gray-400
-              max-w-[clamp(28rem,45vw,70rem)]
-              text-[clamp(0.9rem,1.4vw,2.2rem)]
-            "
-          >
+          <p className="mt-4 text-gray-400 max-w-xl mx-auto text-sm md:text-base">
             Never run out of your dog’s essentials again. Convenient, reliable,
             and delivered right to your door.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8  ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 place-items-center">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className=" relative mx-auto w-full max-w-xl
-                h-[clamp(22rem,28vw,34rem)]
-                rounded-2xl
-                bg-gradient-to-b from-[#8F73FF] to-[#7A5CFF]
-                flex flex-col items-center text-center
-                px-[clamp(1.5rem,2.5vw,3rem)] pt-[clamp(2rem,3vw,4rem)]
-                transition-transform duration-500
-                
-                cursor-pointer"
+              className="
+                relative
+                w-[320px]
+                h-[400px]
+                rounded-[28px]
+                bg-gradient-to-b from-[#B894FF] via-[#9C79F2] to-[#6A3FC6]
+                px-8
+                pt-15
+                flex flex-col
+                items-center
+                text-center
+              "
             >
-              {/* Content */}
-              <h3 className="text-white font-semibold text-2xl 2xl:text-4xl">
+              {/* Title */}
+              <h3 className="text-white font-semibold text-2xl">
                 {plan.title}
               </h3>
-              <p className="text-white 2xl:text-3xl text-xl mt-2">{plan.price}</p>
 
-              <ul className="mt-8 space-y-5 text-white 2xl:text-3xl">
-                <li className="flex justify-center gap-2 ">
-                  <span>✓</span> Exclusive Discounts
+              {/* Price */}
+              <p className="mt-3 text-white text-xl font-medium">
+                {plan.price}
+              </p>
+
+              {/* Features */}
+              <ul className="mt-15 space-y-4 w-full text-left ml-10 ">
+                <li className="flex items-center gap-3 text-white text-lg">
+                  <FaCheck className="text-white text-xl" />
+                  Exclusive Discounts
                 </li>
-                <li className="flex justify-center gap-2">
-                  <span>✓</span> Free Shipping
+                <li className="flex items-center gap-3 text-white text-lg">
+                  <FaCheck className="text-white text-xl" />
+                  Free shipping
                 </li>
-                <li className="flex justify-center gap-2">
-                  <span>✓</span> Cancel Anytime
+                <li className="flex items-center gap-3 text-white text-lg">
+                  <FaCheck className="text-white text-xl" />
+                  Cancel Anytime
                 </li>
               </ul>
 
               {/* Button */}
-              <button className="absolute bottom-[-20px] left-1/2 -translate-x-1/2 w-[60%]
-                                 bg-[#F5C15B] text-black font-semibold text-md
-                                 2xl:text-2xl
-                                 py-3
-                                 hover:p-[13px]
-                                 
-                                 rounded-full hover:opacity-90
-                                 cursor-pointer
-                                 hover:text-white transition">
+              <button
+                className="
+                  absolute
+                  -bottom-6
+                  left-1/2
+                  -translate-x-1/2
+                  bg-[#E2B35E]
+                  text-black
+                  font-semibold
+                  text-sm
+                  px-10
+                  py-3
+                  rounded-full
+                  shadow-md
+                  hover:opacity-90
+                  transition
+                "
+              >
                 Choose Plan
               </button>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

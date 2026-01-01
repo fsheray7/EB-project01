@@ -1,6 +1,7 @@
 import React from "react";
 import allergyChews from "../assets/images/product1.png";
 import probioticChews from "../assets/images/product2.png";
+import { FaEye } from "react-icons/fa";
 
 const products = [
   {
@@ -124,13 +125,13 @@ export default function FeaturedProducts() {
             {/* View Details */}
             <a
               href="#"
-              className="
+              className=" flex items-center justify-center gap-2 
                 mt-3 block
                 text-gray-500 hover:text-gray-700
                 text-[clamp(0.75rem,1.1vw,1.6rem)]
               "
             >
-              View Details →
+              View Details <span ><FaEye /></span>
             </a>
           </div>
         ))}

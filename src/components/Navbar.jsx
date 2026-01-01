@@ -32,10 +32,10 @@ export default function Navbar() {
           </div>
 
           {/* DESKTOP MENU */}
-          <ul className="hidden lg:flex items-center gap-[clamp(1rem,3vw,3rem)] text-[clamp(0.9rem,1.5vw,1.5rem)] font-medium text-gray-700">
+          <ul className="hidden lg:flex items-center gap-[clamp(1rem,3vw,3rem)] text-[clamp(0.9rem,1.5vw,1.5rem)] text-gray-700">
             <li
               onClick={() => navigate("/")}
-              className="hover:text-orange-500 cursor-pointer"
+              className="text-[#e6b978] hover:text-orange-500 cursor-pointer"
             >
               HOME
             </li>

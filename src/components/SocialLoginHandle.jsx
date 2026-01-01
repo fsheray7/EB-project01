@@ -36,7 +36,7 @@ function MicrosoftLoginButton({ text }) {
     <button
       type="button"
       onClick={handleMicrosoftLogin}
-      className="w-full flex items-center justify-center gap-2 border border-gray-300 py-2 sm:py-2.5 md:py-3 rounded-md text-xs sm:text-sm md:text-base 2xl:text-2xl font-medium hover:bg-gray-50 transition"
+      className="w-full flex items-center text-gray-500 justify-center gap-2 border border-gray-300 py-2 sm:py-2.5 md:py-3 rounded-md text-xs sm:text-sm md:text-base 2xl:text-2xl font-medium hover:bg-gray-50 transition"
     >
       <img
         src={microsoftIcon}
@@ -79,7 +79,7 @@ export default function SocialLogin({ mode = "login" }) {
       <button
         type="button"
         onClick={() => googleLogin()}
-        className="w-full flex items-center justify-center gap-2 border border-gray-300 py-2 sm:py-2.5 md:py-3 rounded-md text-xs sm:text-sm md:text-base 2xl:text-2xl font-medium hover:bg-gray-50 transition"
+        className="w-full flex items-center text-gray-500 justify-center gap-2 border border-gray-300 py-2 sm:py-2.5 md:py-3 rounded-md text-xs sm:text-sm md:text-base 2xl:text-2xl font-medium hover:bg-gray-50 transition"
       >
         <img
           src={googleIcon}

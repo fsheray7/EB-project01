@@ -8,6 +8,10 @@ export default {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        
+        abeezee: ["ABeeZee", "sans-serif"],
+        playfair: ['"Playfair Display"', 'serif'],
+      
       },
     },
   },

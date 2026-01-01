@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
 import pawsPattern from "../assets/images/Paws.png";
+import commas from "../assets/images/commas.png"
+import leftarrow from "../assets/images/leftarrow.png"
+import rightarrow from"../assets/images/rightarrow.png"
+import img1 from "../assets/images/testimonialImages/testImg1.png"
+import img2 from "../assets/images/testimonialImages/testImg2.png"
+import img3 from "../assets/images/testimonialImages/testImg3.png"
 
 const testimonials = [
-  { id: 1, name: "Jack", text: "WellFetch's AI vet helped me pick the right probiotic. The delivery is always on time. Highly recommend.", avatar: "https://i.pravatar.cc/100?img=12" },
-  { id: 2, name: "Jaydon Bator", text: "The subscription model is a lifesaver. I never run out of the allergy chews, and Alfie has stopped scratching completely!", avatar: "https://i.pravatar.cc/100?img=32" },
-  { id: 3, name: "Jenny Doe", text: "Fantastic quality and fast shipping. My dog absolutely loves the chews!", avatar: "https://i.pravatar.cc/100?img=45" },
+  { id: 1, name: "Jack", text: "WellFetch's AI vet helped me pick the right probiotic. The delivery is always on time. Highly recommend.", avatar: img1 },
+  { id: 2, name: "Jaydon Bator", text: "The subscription model is a lifesaver. I never run out of the allergy chews, and Alfie has stopped scratching completely!", avatar: img2 },
+  { id: 3, name: "Jenny Doe", text: "Fantastic quality and fast shipping. My dog absolutely loves the chews!", avatar: img3 },
   { id: 4, name: "Alex Smith", text: "I noticed visible improvements in my dog's digestion within weeks.", avatar: "https://i.pravatar.cc/100?img=18" },
   { id: 5, name: "Sarah Khan", text: "Reliable subscription and great customer support. Highly satisfied.", avatar: "https://i.pravatar.cc/100?img=29" },
   { id: 6, name: "Daniel Brown", text: "Premium ingredients and real results. Worth every penny.", avatar: "https://i.pravatar.cc/100?img=52" },
@@ -47,73 +53,139 @@ function Testimonials() {
       <div className="w-full px-[clamp(1rem,4vw,6rem)] relative z-10">
         {/* Header */}
         <div className="text-center w-full mx-auto mb-[clamp(2rem,5vw,6rem)]">
-          <h2 className="text-[clamp(2rem,5vw,4.5rem)] font-bold text-white mb-[clamp(1rem,2vw,2rem)]">
+          <h2 className="text-[clamp(2rem,5vw,4.5rem)]  text-white mb-[clamp(1rem,2vw,2rem)]">
             Testimonials
           </h2>
           <p className="text-[clamp(1rem,2vw,1.5rem)] text-gray-300 leading-relaxed">
-            See real experiences and feedback from our clients as they share how our products have helped them and their furry friends.
+            See real experiences and feedback from our clients as they share <br /> how our products have helped them and their furry friends.
           </p>
         </div>
+        
+
 
         {/* Cards */}
-        <div className="mt-[clamp(2rem,6vw,7rem)] relative">
-          <div className={`grid gap-[clamp(1.2rem,2.5vw,3.5rem)] ${cardsPerView === 1 ? 'grid-cols-1' :
-              cardsPerView === 2 ? 'grid-cols-2' :
-                cardsPerView === 3 ? 'lg:grid-cols-3' :
-                  '2xl:grid-cols-4'
-            }`}>
-            {getVisibleCards().map(item => (
-              <div
-                key={item.id}
-                className="relative rounded-2xl p-[clamp(2rem,3vw,3.5rem)] pt-[clamp(4rem,5vw,6.5rem)] min-h-[clamp(300px,30vw,420px)] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 text-gray-200 transition-all duration-500 hover:scale-[1.03] hover:border-white/30 hover:shadow-2xl group"
-              >
-                {/* Avatar */}
-                <div className="absolute -top-[clamp(2.5rem,4vw,5rem)] left-[clamp(2.5rem,4vw,3.5rem)] w-[clamp(5rem,6.5vw,6.5rem)] h-[clamp(5rem,6.5vw,6.5rem)] rounded-full border-3 border-white bg-white p-[clamp(0.3rem,0.5vw,0.4rem)] group-hover:scale-110 transition-transform duration-300">
-                  <img src={item.avatar} alt={item.name} className="w-full h-full rounded-full object-cover" />
-                </div>
+         
+       <div className="mt-[clamp(2rem,6vw,7rem)] relative  ">
+  <div
+    className={` grid gap-[clamp(1.2rem,2.5vw,6rem)] ${
+      cardsPerView === 1
+        ? "grid-cols-1"
+        : cardsPerView === 2
+        ? "grid-cols-2"
+        : cardsPerView === 3
+        ? "lg:grid-cols-3"
+        : "2xl:grid-cols-4"
+    }`}
+  >
+    {getVisibleCards().map((item) => (
+      <div
+        key={item.id}
+        className="
+          relative
+          w-full
+          w-[380px]
+          md:w-[350px]
+          lg:w-[320px]
+          xl:w-[330px]
+          2xl:w-[460px]
 
-                {/* Quote Mark */}
-                <div className="absolute bottom-[clamp(1.5rem,2.5vw,3rem)] right-[clamp(1.5rem,2.5vw,3rem)] text-[clamp(5.5rem,7vw,7.5rem)] text-white/5 group-hover:text-white/10 transition-colors duration-300">
-                  "
-                </div>
-
-                {/* Text */}
-                <p className="text-[clamp(1.1rem,2vw,1.6rem)] leading-relaxed mb-[clamp(1.5rem,3vw,2.5rem)] line-clamp-4">
-                  "{item.text}"
-                </p>
-
-                {/* Name */}
-                <div className="mt-[clamp(1.5rem,2.5vw,2rem)] pt-[clamp(0.6rem,1vw,1.2rem)] border-t border-white/10">
-                  <p className="text-[clamp(1.2rem,2vw,1.6rem)] font-semibold text-white">
-                    {item.name}
-                  </p>
-                  <p className="text-[clamp(1rem,1.5vw,1.3rem)] text-gray-400 mt-[clamp(0.3rem,0.5vw,0.5rem)]">
-                    Happy Pet Parent
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Pagination */}
-          <div className="flex justify-center items-center gap-[clamp(2.5rem,4vw,6rem)] mt-[clamp(3rem,4vw,4.5rem)]">
-            <button
-              onClick={prevSlide}
-              className="w-[clamp(3.5rem,4.5vw,5.5rem)] h-[clamp(3.5rem,4.5vw,5.5rem)] rounded-full bg-white hover:bg-gray-300 text-black flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg border border-white/20
-              text-[clamp(1rem,1.5vw,5rem)]"
-              aria-label="Previous testimonial"
-            >
-              ←
-            </button>
-            <button
-              onClick={nextSlide}
-              className="w-[clamp(3.5rem,4.5vw,5.5rem)] h-[clamp(3.5rem,4.5vw,5.5rem)] rounded-full bg-white hover:bg-gray-300 text-black flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg border border-white/20 text-[clamp(1rem,1.5vw,5rem)]"
-              aria-label="Next testimonial"
-            >
-              →
-            </button>
-          </div>
+          h-[350px]
+          md:h-[320px]
+          lg:h-[300px]
+          xl:h-[310px]
+          2xl:h-[420px]
+          rounded-[24px]
+          bg-[linear-gradient(145deg,#8E919C_0%,#4A4D59_100%)]
+          border-2 border-white
+          px-10
+          pt-[88px]
+          pb-[72px]
+          text-white
+          
+        "
+      >
+        {/* Avatar (NO CUT) */}
+        <div
+          className="
+            absolute
+            -top-[36px]
+            left-[40px]
+            w-[72px]
+            h-[72px]
+            rounded-full
+            
+            
+            z-30
+          "
+        >
+          <img
+            src={item.avatar}
+            alt={item.name}
+            className="w-full h-full rounded-full object-cover"
+          />
         </div>
+
+        {/* Quotation Mark (LOCKED POSITION) */}
+        <div className="absolute bottom-[1px] left-[1px] pointer-events-none z-0">
+          <img
+            src={commas}
+            alt="quotation mark"
+            className="w-[133px] opacity-100
+            onject-cover rounded-[40px]"
+          />
+        </div>
+
+        {/* Text */}
+        <p
+          className="
+            relative
+            z-10
+            max-w-[92%]
+            text-[16px]
+            leading-[28px]
+            text-white/90
+          "
+        >
+          {item.text}
+        </p>
+
+        {/* Name */}
+        <p
+          className="
+            absolute
+            left-10
+            bottom-8
+            text-[16px]
+          
+            text-white
+            z-20
+          "
+        >
+          {item.name}
+        </p>
+      </div>
+    ))}
+  </div>
+
+  {/* Pagination */}
+  <div className="flex justify-center items-center gap-[clamp(2.5rem,4vw,6rem)] mt-[clamp(3rem,4vw,4.5rem)]">
+    <button
+      onClick={prevSlide}
+      className="w-[clamp(3.5rem,4.5vw,5.5rem)] h-[clamp(3.5rem,4.5vw,5.5rem)] rounded-full  flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg border border-white/20 text-[clamp(1rem,1.5vw,5rem)]"
+      aria-label="Previous testimonial"
+    >
+     <img src={leftarrow} alt="" className="w-[clamp(3.5rem,4.5vw,5.5rem)] h-[clamp(3.5rem,4.5vw,5.5rem)]"/>
+    </button>
+    <button
+      onClick={nextSlide}
+      className="w-[clamp(3.5rem,4.5vw,5.5rem)] h-[clamp(3.5rem,4.5vw,5.5rem)] rounded-full text-black flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg border border-white/20 text-[clamp(1rem,1.5vw,5rem)]"
+      aria-label="Next testimonial"
+    >
+       <img src={rightarrow} alt="" className="w-[clamp(3.5rem,4.5vw,5.5rem)] h-[clamp(3.5rem,4.5vw,5.5rem)]"/>
+    </button>
+  </div>
+</div>
+
 
 
       </div>

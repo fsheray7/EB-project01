@@ -16,7 +16,7 @@ function Banner() {
       />
 
       {/* Main Container */}
-      <div className="relative z-10  md:min-h-[650px] flex items-center justify-between px-6 lg:px-20">
+      <div className="relative z-10  md:min-h-[562px] flex items-center justify-between px-6 lg:px-20">
 
         {/* Desktop Dog Image */}
         <div className="hidden md:block absolute md:bottom-0  left-0">
@@ -25,48 +25,43 @@ function Banner() {
             alt="Dog"
             className="
               object-contain
-              w-[clamp(18rem,25vw,38rem)]
+              w-[clamp(18rem,25vw,28rem)]
             "
           />
         </div>
 
         {/* Text Content */}
-        <div className="w-full text-center md:text-center py-2">
+        <div className="w-full text-center md:text-center font-abeezee">
           <h1
             className="
               text-[#F4D06F]
-              font-bold
+        
               leading-tight
 
-              text-3xl
-              sm:text-4xl
-              
-              md:text-[clamp(3rem,4.5vw,7rem)]
+              text-[80px]
             "
           >
             Daily wellness,
             <br />
             <span
-              className="
-                italic text-white font-normal
-                text-[clamp(1.5rem,2.8vw,4rem)]
-              "
+              className=" text-[#F4D06F] "
             >
-              delivered monthly.
+              delivered<span className="text-white italic "> monthly.</span>
             </span>
           </h1>
 
           <p
             className="
               mt-4
+              font-poppins
               text-white/90
-              text-sm
+              text-base
               sm:text-base
               md:text-[clamp(1.1rem,1.3vw,1.8rem)]
               leading-relaxed
             "
           >
-            Premium, science-backed supplements for your dog.
+            Premium, science-backed supplements for your dog. <br />
             Subscribe today and save 15% on every order.
           </p>
 
@@ -80,10 +75,8 @@ function Banner() {
               hover:bg-gray-100
               transition
               cursor-pointer
-              
-              px-6 py-3 text-sm sm:text-base
-              md:px-[clamp(2rem,3vw,4.5rem)]
-              md:py-[clamp(0.9rem,1.2vw,2rem)]
+             py-[12px]
+             px-[30px]
               md:text-[clamp(1rem,1.4vw,2.2rem)]
             "
           >
@@ -97,7 +90,7 @@ function Banner() {
         <img
           src={dogImage}
           alt="Dog"
-          className="w-44 object-contain"
+          className="w-[358px] h-[308px] object-contain"
         />
       </div>
     </section>

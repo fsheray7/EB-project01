@@ -6,16 +6,34 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import image1 from "../assets/images/heroImage.png";
+
+const paginationStyles = `
+  .carousel-pagination {
+    padding-bottom: 50px !important;
+  }
+  .carousel-pagination .swiper-pagination {
+    bottom: 0 !important;
+    position: relative !important;
+  }
+  .carousel-pagination .swiper-pagination-bullet {
+    background-color: #000000ff;
+  }
+  .carousel-pagination .swiper-pagination-bullet-active {
+    background-color: #FFC700;
+  }
+`;
 import image2 from "../assets/images/image2.png";
 
 const slides = [
   { id: 1, image: image1, alt: "Hero image" },
   { id: 2, image: image2, alt: "Second slide" },
+  { id: 3, image: image2, alt: "third slide" },
 ];
 
 function CarouselCard() {
   return (
     <section className="relative w-full overflow-hidden bg-[#F6F6F6]">
+      <style>{paginationStyles}</style>
       <div
         className="
           w-full
@@ -33,7 +51,7 @@ function CarouselCard() {
           pagination={{
             clickable: true,
           }}
-          className="w-full h-full "
+          className="carousel-pagination w-full h-full"
         >
           {slides.map((slide) => (
             <SwiperSlide key={slide.id}>
@@ -44,7 +62,7 @@ function CarouselCard() {
                   w-full h-full
                   object-fit object-center
                   transition-transform duration-500
-                  hover:scale-105
+                  hover:scale-101
                 "
                 loading="lazy"
               />
@@ -52,6 +70,7 @@ function CarouselCard() {
             </SwiperSlide>
           ))}
         </Swiper>
+        
       </div>
     </section>
   );
