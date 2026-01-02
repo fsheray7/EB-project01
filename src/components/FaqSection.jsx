@@ -67,7 +67,7 @@ function FAQSection() {
               2xl:text-[16px]
             "
           >
-            We’ve gathered the most common questions to help you <br />
+            We’ve gathered the most common questions to help you 
             understand how Wellfetch works
           </p>
         </div>
