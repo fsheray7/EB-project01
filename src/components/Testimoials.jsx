@@ -40,7 +40,7 @@ function Testimonials() {
   const getVisibleCards = () => testimonials.slice(currentIndex, currentIndex + cardsPerView);
 
   return (
-    <section className="relative bg-[#1f243d] py-[clamp(3rem,6vw,6rem)] font-poppins overflow-visible">
+    <section className="relative bg-[#1f243d] py-12 font-poppins overflow-visible">
       {/* Background Pattern */}
       <div
         className="absolute w-full inset-0 bg-[#1f243d] bg-repeat opacity-50"
@@ -50,7 +50,7 @@ function Testimonials() {
           backgroundPosition: "fit",
         }}
       />
-      <div className="w-full px-[clamp(1rem,4vw,6rem)] relative z-10">
+      <div className="w-full  flex flex-col justify-center px-14 items-center   relative z-10">
         {/* Header */}
         <div className="text-center w-full mx-auto">
           <h1 className="text-[30px] md:text-[45px] lg:text-[55px] xl:text-[35px] font-semibold text-white mb-[clamp(1rem,2vw,2rem)]">
@@ -65,9 +65,9 @@ function Testimonials() {
 
         {/* Cards */}
          
-       <div className="mt-[clamp(4rem,6vw,7rem)] relative  ">
+       <div className="mt-[clamp(4rem,6vw,7rem)]   relative   ">
   <div
-    className={` grid gap-[clamp(1.2rem,2.5vw,6rem)] ${
+    className={` grid gap-12 ${
       cardsPerView === 1
         ? "grid-cols-1"
         : cardsPerView === 2
@@ -82,23 +82,24 @@ function Testimonials() {
         key={item.id}
         className="
           relative
+          flex items-center justify-center
           w-full
-          w-[380px]
-          md:w-[350px]
-          lg:w-[380px]
-          xl:w-[390px]
-          2xl:w-[460px]
-
+          w-[260px]
+          sm:w-[180px]
+          md:w-[320px]
+          lg:w-[300px]        
+          xl:w-[300px]        
+          2xl:w-[400px]        
           h-[250px]
-          md:h-[280px]
-          lg:h-[300px]
-          xl:h-[300px]
-          2xl:h-[420px]
-          rounded-[24px]
-          bg-[linear-gradient(145deg,#8E919C_0%,#4A4D59_100%)]
-          border-2 border-white
-          px-8
-          pt-[88px]
+          md:h-[230px]
+          lg:h-[230px]
+          xl:h-[230px]
+          2xl:h-[300px]
+          rounded-[13px]
+          bg-[linear-gradient(175deg,#8E919C_0.1%,#4A4D59_50%)]
+          border-3 border-[#b3b7c3]
+          px-6
+         
           text-white
           
         "
@@ -108,28 +109,50 @@ function Testimonials() {
           className="
             absolute
             -top-[36px]
-            left-[40px]
-            w-[72px]
-            h-[72px]
+            left-[38px]
+            w-[65px]
+            h-[65px]
             rounded-full
             
             
             z-30
           "
         >
+           <div
+    className="
+      absolute
+      -bottom-[4px]
+      left-1/2
+      -translate-x-1/2
+      w-[73px]
+      h-[36px]
+      bg-[#b3b7c3]
+      rounded-b-full
+      z-10
+    "
+  />
           <img
             src={item.avatar}
             alt={item.name}
-            className="w-full h-full rounded-full object-cover"
+            className="w-full h-full rounded-full object-cover
+            relative
+      z-20
+      w-full
+      h-full
+      rounded-full
+      object-cover"
           />
         </div>
+
+
+
 
         {/* Quotation Mark (LOCKED POSITION) */}
         <div className="absolute bottom-[6px] left-[1px] pointer-events-none z-0">
           <img
             src={commas}
             alt="quotation mark"
-            className="md:w-[133px] w-[80px] opacity-100
+            className=" w-[70px] md:w-[60px] md:h-auto lg:w-[80px] opacity-100
             onject-cover "
           />
         </div>
@@ -137,10 +160,21 @@ function Testimonials() {
         {/* Text */}
         <p
           className="
+          font-poppins
             relative
             z-10
-            pb-14
-            text-[16px]
+            bottom-6
+            md:bottom-6
+            lg:bottom-4
+            xl:bottom-4
+            2xl:bottom-4
+            text-center
+            text-[10px]
+            sm:text-[14px]
+            md:text-[10px]
+            lg:text-[12px]
+            xl:text-[14px]
+            2xl:text-[16px]
             text-[#FFFFFF]
           "
         >
@@ -151,9 +185,21 @@ function Testimonials() {
         <p
           className="
             absolute
-            left-10
+            left-8
+            md:left-4
+            lg:left-4
+            xl:left-4
+            2xl:left-4
             bottom-8
-            text-[16px]
+            md:bottom-4
+            lg:bottom-4
+            xl:bottom-4
+            2xl:bottom-4
+            text-[10px]
+            md:text-[12px]
+            lg:text-[14px]
+            xl:text-[14px]
+            2xl:text-[16px]
             mx-auto
             text-white
             z-20
@@ -169,17 +215,17 @@ function Testimonials() {
   <div className="flex justify-center items-center gap-[clamp(2.5rem,4vw,6rem)] mt-[clamp(3rem,4vw,4.5rem)]">
     <button
       onClick={prevSlide}
-      className="w-[clamp(3.5rem,4.5vw,5.5rem)] h-[clamp(3.5rem,4.5vw,5.5rem)] rounded-full  flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg border border-white/20 text-[clamp(1rem,1.5vw,5rem)]"
+      className=" rounded-full  flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg border border-white/20 text-[clamp(1rem,1.5vw,5rem)]"
       aria-label="Previous testimonial"
     >
-     <img src={leftarrow} alt="" className="w-[clamp(3.5rem,4.5vw,5.5rem)] h-[clamp(3.5rem,4.5vw,5.5rem)]"/>
+     <img src={leftarrow} alt="" className="w-[clamp(3rem,4.5vw,4rem)] h-[clamp(3rem,4.5vw,4rem)]"/>
     </button>
     <button
       onClick={nextSlide}
-      className="w-[clamp(3.5rem,4.5vw,5.5rem)] h-[clamp(3.5rem,4.5vw,5.5rem)] rounded-full text-black flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg border border-white/20 text-[clamp(1rem,1.5vw,5rem)]"
+      className=" rounded-full text-black flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg border border-white/20 text-[clamp(1rem,1.5vw,5rem)]"
       aria-label="Next testimonial"
     >
-       <img src={rightarrow} alt="" className="w-[clamp(3.5rem,4.5vw,5.5rem)] h-[clamp(3.5rem,4.5vw,5.5rem)]"/>
+       <img src={rightarrow} alt="" className="w-[clamp(3rem,4.5vw,4rem)] h-[clamp(3rem,4.5vw,4rem)]"/>
     </button>
   </div>
 </div>

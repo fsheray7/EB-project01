@@ -45,3 +45,18 @@ body {
     width: 60px;
   }
 }
+
+
+@layer utilities {
+  .font-abeezee{
+    font-family: 'Abeezee', sans-serif;
+    ;
+  }
+  
+  .font-poppins{
+    font-family: 'Poppins', sans-serif;
+    ;
+  }
+  
+  
+}

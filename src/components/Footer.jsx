@@ -1,79 +1,80 @@
 import React from 'react'
 import { FaFacebookF,  FaWhatsapp , FaAmazon } from "react-icons/fa";
+import bgImg from "../assets/images/gradientBg.png"
+import Logo from "../assets/images/logo.png"
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-r from-blue-400 via-purple-400 to-orange-400  px-4 py-10">
+    <footer className=" mt-4 w-full bg-[url({bgImg})] bg-cover bg-center bg-no-repeatpx-4 py-10 px-8"
+    style={{ backgroundImage: `url(${bgImg})`}}>
+      
       {/* MAIN FOOTER CARD */}
-      <div className="flex w-full rounded-3xl md:justify-space-between bg-white p-6  sm:p-10 2xl:p-18 lg:p-14">
-        <div className="grid  mt-10 grid-cols-1 gap-10 sm:grid-cols-2 w-full   lg:grid-cols-4">
+      <div className="font-poppins w-full rounded-3xl bg-white px-4 py-5 sm:py-6 md:py-6 lg:py-7">
+        {/* 4 Column Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 md:gap-8 lg:gap-10 w-full">
 
           {/* LOGO + DESC */}
-          <div>
-            <h2 className="text-3xl 2xl:text-5xl font-bold text-[#D9A441]">Wellfetch</h2>
-            <p className=" mt-3 mx-auto text-gray-900
-              max-w-[clamp(28rem,45vw,70rem)]
-              text-[clamp(0.9rem,1.4vw,2.2rem)]">
+          <div className="flex flex-col items-start gap-2">
+            <img src={Logo} alt="Logo image" className="w-24 h-10 sm:w-28 sm:h-11 md:w-24 md:h-9 lg:w-32 lg:h-12 xl:w-36 xl:h-14 object-contain" />
+            <p className="text-[#000000] text-xs sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-base leading-tight">
               Premium, vet-formulated supplements for dogs. Keeping tails wagging since 2025.
             </p>
           </div>
 
           {/* QUICK LINKS */}
-          <div className=" 2xl:ml-[40%]">
-            <h4 className="mb-4 text-sm  2xl:text-2xl uppercase text-gray-800">
+          <div className="flex flex-col items-start gap-2">
+            <h4 className="text-xs sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-base font-semibold uppercase text-[#4A4A4A]">
               Quick Links
             </h4>
-            <ul className=" mt-3 text-gray-900
-              max-w-[clamp(28rem,45vw,70rem)]
-              text-[clamp(0.9rem,1.4vw,2rem)]">
-              <li className='cursor-pointer'>Home</li>
-              <li className='cursor-pointer'>Shop</li>
-              <li className='cursor-pointer'>Allergy Chews</li>
-              <li className='cursor-pointer'>Probiotic Chews</li>
-              <li className='cursor-pointer'>Blogs</li>
+            <ul className="text-[#000000] space-y-2 text-xs sm:text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-lg">
+              <li className="cursor-pointer hover:text-[#D9A441] transition">Home</li>
+              <li className="cursor-pointer hover:text-[#D9A441] transition">Shop</li>
+              <li className="cursor-pointer hover:text-[#D9A441] transition">Allergy Chews</li>
+              <li className="cursor-pointer hover:text-[#D9A441] transition">Probiotic Chews</li>
+              <li className="cursor-pointer hover:text-[#D9A441] transition">Blogs</li>
             </ul>
           </div>
 
           {/* HELP */}
-          <div className=" 2xl:ml-[40%]">
-            <h4 className=" mb-4 text-sm 2xl:text-4xl font-semibold uppercase text-gray-600">
+          <div className="flex flex-col items-start gap-2">
+            <h4 className="text-xs sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-base font-semibold uppercase text-[#4A4A4A]">
               Help
             </h4>
-            <ul className="  text-[clamp(0.9rem,1.4vw,2rem)] text-gray-900">
-              <li className='cursor-pointer'>Manage Subscription</li>
-              <li className='cursor-pointer'>Contact Us</li>
+            <ul className="text-[#000000] space-y-1 text-xs sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-base">
+              <li className="cursor-pointer hover:text-[#D9A441] transition">Manage Subscription</li>
+              <li className="cursor-pointer hover:text-[#D9A441] transition">Contact Us</li>
             </ul>
           </div>
 
           {/* CONTACT */}
-          <div className=' lg:flex flex-col items-center gap-[clamp(1rem,2vw,1rem)] py-2'>
-            <button className="px-[clamp(1rem,2vw,2rem)] py-[clamp(0.5rem,1vw,1rem)] text-[clamp(0.85rem,1.5vw,1rem)] rounded-xl bg-black text-white font-medium hover:bg-gray-700 transition cursor-pointer">
+          <div className="flex flex-col items-start gap-2">
+            <button className="px-3 sm:px-4 md:px-3 lg:px-4 py-1.5 sm:py-2 md:py-1.5 lg:py-2 text-xs sm:text-xs md:text-xs lg:text-xs rounded-lg bg-black text-white font-medium hover:bg-gray-700 transition cursor-pointer whitespace-nowrap">
               Request a call
             </button>
 
-            <p className="  text-[clamp(0.85rem,2vw,1.2rem)]">+1 (999) 999-99-99</p>
-            <p className=" text-[clamp(0.85rem,2vw,1.2rem)]">info@wellfetch.com</p>
-
-            <p className="  text-[clamp(0.85rem,1.4vw,1rem)]">
-              Pet Store Ltd, 123 High Street<br />
-              Manchester, M1 2AB United Kingdom
-            </p>
-
-            {/* SOCIAL ICONS */}
-            <div className="pt-10 flex gap-3">
-              {[FaAmazon, FaWhatsapp, FaFacebookF, ].map((Icon, i) => (
+            <div className="space-y-1 text-xs sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-base text-[#000000]">
+              <p className="cursor-pointer hover:text-[#D9A441] transition">+1 (999) 999-99-99</p>
+              <p className="cursor-pointer hover:text-[#D9A441] transition">info@wellfetch.com</p>
+              <p className="cursor-pointer hover:text-[#D9A441] transition leading-relaxed">
+                Pet Store Ltd, 123 High Street<br />
+                Manchester, M1 2AB United Kingdom
+              </p>
+            </div>
+             {/* SOCIAL ICONS */}
+        <div className="flex py-3 items-start justify-center gap-2">
+              {[FaAmazon, FaWhatsapp, FaFacebookF].map((Icon, i) => (
                 <div
                   key={i}
-                  className="flex px-[clamp(1rem,2vw,1rem)] py-[clamp(1rem,2vw,1rem)] text-[clamp(1rem,1.5vw,1rem)] items-center justify-center
-                  
-                  rounded-full border border-[black]  text-white cursor-pointer hover:bg-[#e29301] bg-[#D9A441]"
+                  className="flex items-center justify-center px-1.5 py-1.5 rounded-full border border-black text-white cursor-pointer hover:bg-[#e29301] bg-[#D8A85B] transition text-xs"
                 >
-                  <Icon size={20} />
+                  <Icon size={16} />
                 </div>
               ))}
-            </div>
+        </div>
           </div>
         </div>
+
+       
       </div>
 
       {/* GRADIENT STRIP */}
@@ -86,24 +87,27 @@ export default function Footer() {
            lg:text-[clamp(2rem,1.5vw,4rem)]
            xl:text-[clamp(2rem,1.5vw,4rem)]
              text-white">
-            Get 10% off your first order plus <br /> expert dog health tips.
+            Get 10% off your first order plus expert dog health tips.
           </h3>
 
-          <div className= " border border-white relative mt-10 flex w-full  text-[clamp(1rem,1.5vw,2rem)] items-center rounded-[18px] border-[2px solid white] bg-white/20 px-4 py-5 backdrop-blur">
+          <div className= " border border-white relative mt-10 flex w-full  text-[clamp(1rem,1.5vw,2rem)] items-center rounded-[18px] border-[2px solid white] bg-white/20 px-4  sm:py-4 md:py-4 lg:py-4 xl:py-4 backdrop-blur">
           <h2 className='absolute 
            text-lg
-          bottom-20
+           2xl:text-2xl
+           
+          bottom-10
           sm:bottom-18
           md:bottom-20
           lg:bottom-25
           xl:bottom-25
            2xl:bottom-30 z-100 font-bold text-white' >Join The Pack</h2>
           <p 
-      className="absolute top-[-clamp(1rem,1vw,2.2rem)] left-[clamp(1rem,2vw,2rem)] text-[clamp(0.75rem,1vw,1rem)] 2xl:text-[clamp(0.75rem,1vw,1.5rem)] bottom-12
+      className="absolute hidden md:block lg:block xl:block 2xl:block top-[-clamp(1rem,1vw,2.2rem)] left-[clamp(1rem,2vw,2rem)] text-[clamp(0.75rem,1vw,1rem)] 2xl:text-[clamp(0.75rem,1vw,1rem)] bottom-12
        sm:bottom-13
-       md:bottom-14
-       lg:bottom-15
+       md:bottom-12
+       lg:bottom-12
        xl:bottom-16
+       2xl:bottom-16
         text-white  uppercase"
     >
       YOUR EMAIL

@@ -37,15 +37,19 @@ function FAQSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="w-full bg-white py-16 font-poppins">
+    <section className="w-full font-poppins bg-[#F6F6F6] py-16 px-8 sm:px-10 md:px-15 lg:px-20 xl:px-40 2xl:px-40 font-poppins">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* HEADER */}
         <div className="text-center mb-12">
           <h2
             className="
-              font-semibold text-gray-900 leading-tight
-              text-[clamp(1.6rem,3.2vw,4.5rem)]
+               font-abeezee text-[#000000]leading-tight
+              text-[25px]
+              md:text-[30px]
+              lg:text-[30px]
+              xl:text-[30px]
+              2xl:text-[40px]
             "
           >
             Everything You Need to <br className="hidden sm:block" />
@@ -54,9 +58,13 @@ function FAQSection() {
 
           <p
             className="
-              mt-4 mx-auto text-gray-500
+              mt-4 mx-auto text-[#4A4A4A]
               max-w-[clamp(30rem,55vw,75rem)]
-              text-[clamp(0.9rem,1.5vw,2.2rem)]
+              text-[12px]
+              md:text-[14px]
+              lg:text-[16px]
+              xl:text-[16px]
+              2xl:text-[16px]
             "
           >
             We’ve gathered the most common questions to help you <br />
@@ -65,16 +73,17 @@ function FAQSection() {
         </div>
 
         {/* FAQ LIST */}
-        <div className="space-y-[clamp(0.75rem,1.2vw,2rem)]">
+        <div className="space-y-2">
           {faqs.map((item, index) => (
             <div
               key={index}
               className={`
-                rounded-lg border-2 transition-all duration-300
+                rounded-lg border-2 transition-all 
+                    2xl:text-14px duration-300
                 ${
                   activeIndex === index
-                    ? "bg-gradient-to-r from-[#d83b64] to-[#b8325a] text-white border-red-600"
-                    : "bg-white border-gray-200"
+                    ? "bg-[#AA335B] text-white text-[8px] sm:text-[8px]    md:text-[14px] lg:text-[14px] xl:text-[14px]         2xl:text-[16px ] border-[#FC0000]"
+                    : "bg-white border-[#C9C9C9]"
                 }
               `}
             >
@@ -84,15 +93,23 @@ function FAQSection() {
                   setActiveIndex(activeIndex === index ? -1 : index)
                 }
                 className="
-                  w-full flex justify-between items-center text-left
-                  px-[clamp(1rem,2vw,3rem)]
-                  py-[clamp(0.8rem,1.6vw,2.5rem)]
+                  w-full flex justify-between  items-center text-left
+                  px-[clamp(1px,2vw,60px)]
+                  py-[clamp(4px,1.6vw,20px)]
+                  
+
                 "
               >
                 <span
                   className={`
-                    text-[clamp(0.9rem,1.5vw,2.3rem)]
-                    ${activeIndex === index ? "text-yellow-600 font-semibold" : "text-gray-900"}
+                    
+                    text-[10px]
+                    sm:text-[8px]
+                    md:text-[10px]
+                    lg:text-[12px]
+                    xl:text-[14px]
+                    2xl:text-[18px]
+                    ${activeIndex === index ? "text-[#D8A85B]" : "text-[#000000] border-[#C9C9C9]"}
                   `}
                 >
                   {item.question}
@@ -100,15 +117,15 @@ function FAQSection() {
 
                 <span
                   className={`
-                    flex items-center justify-center rounded-full border
+                    flex items-center justify-center  border-[#D8A85B]   rounded-full border
                     transition
-                    w-[clamp(1.4rem,2vw,3rem)]
-                    h-[clamp(1.4rem,2vw,3rem)]
-                    text-[clamp(1rem,1.4vw,2rem)]
+                    w-[clamp(22px,2vw,48px)]
+                    h-[clamp(22px,2vw,48px)]
+                    
                     ${
                       activeIndex === index
-                        ? "border-red text-yellow-500"
-                        : "border-gray-400 text-white-600"
+                        ? " text-[#D8A85B]  text-[20px]"
+                        : "border-gray-800   text-[16px] text-white-600"
                     }
                   `}
                 >
@@ -120,10 +137,18 @@ function FAQSection() {
               {activeIndex === index && (
                 <div
                   className="
-                    px-[clamp(1rem,2vw,3rem)]
-                    pb-[clamp(0.8rem,1.6vw,2.5rem)]
-                    text-yellow/90
-                    text-[clamp(0.85rem,1.4vw,2.1rem)]
+
+                  font-poppins
+                    px-[clamp(16px,4vw,48px)]
+                    py-2
+                    pb-4
+                    text-[8px]
+                    sm:text-[8px]
+                    md:text-[10px]
+                    lg:text-[12px]
+                    xl:text-[12px]
+                    2xl:text-[14px]
+
                   "
                 >
                   {item.answer}

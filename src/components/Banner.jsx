@@ -30,7 +30,7 @@ function Banner() {
             alt="Dog"
             className="
               object-contain
-              w-[clamp(13rem,25vw,28rem)]
+              w-[clamp(13rem,25vw,22rem)]
             "
           />
         </div>
@@ -39,6 +39,7 @@ function Banner() {
         <div className="w-full text-center md:text-center ">
           <h1
             className="
+              font-abeezee
               text-[#F4D06F]
             
               leading-tight
@@ -65,8 +66,9 @@ function Banner() {
               text-xs
               sm:text-base
               lg:text-base
-              md:text-[clamp(1.1rem,1.3vw,1.8rem)]
+              md:text- base
               leading-relaxed
+              font-semibold
             "
           >
             Premium, science-backed supplements for your dog.
@@ -80,8 +82,9 @@ function Banner() {
               text-xs
               sm:text-base
               lg:text-base
-              md:text-[clamp(1.1rem,1.3vw,1.8rem)]
+              md:text-base
               leading-relaxed
+              font-semibold
             "
           >
             Subscribe today and save 15% on every order.
@@ -106,7 +109,7 @@ function Banner() {
              xl:py-[12px]
              xl:px-[30px]
               text-[clamp(1rem,1vw,1rem)]
-              md:text-[clamp(1rem,1.4vw,2.2rem)]
+              md:text-[clamp(1rem,1.4vw,2rem)]
               lg:text-[clamp(1rem,1.4vw,2.2rem)]
               xl:text-[clamp(1rem,1.4vw,2.2rem)]
             "
