@@ -83,29 +83,29 @@ function SubscriptionCard({ image, order, title, frequency, date, price }) {
 
           </div>
           {/* META INFO */}
-          <div className="flex justify-between flew-row gap-15 mt-3 text-xs text-[#00000080]">
-
-            {/* NEXT ORDER */}
-            <span className="flex items-center gap-3 bg-[#F0F0F0]  py-3 px-4 rounded-lg justify-start text-left">
-              <MdOutlineCalendarToday className="text-[#4A4A4A] text-lg flex-shrink-0" />
-
-              <div className="flex  font-medium flex-col">
-                <span className="font-medium">NEXT ORDER DATE </span>
-                <strong className="text-black">1 Jan 2026</strong>
-              </div>
-            </span>
-
-            {/* PAYMENT METHOD */}
-            <span className="flex items-center gap-3 bg-[#F0F0F0]  py-3 px-4 rounded-xl justify-start text-left">
-              <CiCreditCard1 className="text-[#4A4A4A] text-xl flex-shrink-0" />
-
-              <div className="flex font-medium flex-col">
-                <span>PAYMENT METHOD</span>
-                <strong className="text-black">VISA •••• 4242</strong>
-              </div>
-            </span>
-
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-3 text-xs text-[#00000080]">
+        
+                    {/* NEXT ORDER */}
+                    <span className="flex items-center gap-3 bg-[#F0F0F0] py-3 px-4 rounded-lg">
+                      <MdOutlineCalendarToday className="text-[#4A4A4A] text-lg flex-shrink-0" />
+        
+                      <div className="flex  font-medium flex-col">
+                        <span className="font-medium text-[10px] sm:text-xs">NEXT ORDER DATE </span>
+                        <strong className="text-black text-xs sm:text-sm">01 Jan 2026</strong>
+                      </div>
+                    </span>
+        
+                    {/* PAYMENT METHOD */}
+                    <span className="flex items-center gap-3 bg-[#F0F0F0] py-3 px-4 rounded-xl">
+                      <CiCreditCard1 className="text-[#4A4A4A] text-xl flex-shrink-0" />
+        
+                      <div className="flex font-medium flex-col">
+                        <span className="text-[10px] sm:text-xs">PAYMENT METHOD</span>
+                        <strong className="text-black text-xs sm:text-sm">VISA •••• 4242</strong>
+                      </div>
+                    </span>
+        
+                  </div>
 
 
         </div>

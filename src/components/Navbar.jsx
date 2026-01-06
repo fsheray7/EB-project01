@@ -83,6 +83,7 @@ export default function Navbar() {
             </button>
           </ul>
           <img src="/cartImage.png" alt="cart" className="mr-3 mb-4 w-6 h-6 sm:w-7 sm:h-7 cursor-pointer" />
+          <FaRegUser onClick={handleProfile} className="mr-3 mb-4 w-6 h-6 sm:w-7 sm:h-7 cursor-pointer" />
         </div>
       )}
     </nav>
