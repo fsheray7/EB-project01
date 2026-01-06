@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCheck } from "react-icons/fa";
+import { FaArrowRight, FaCheck } from "react-icons/fa";
 import { MdOutlineCalendarToday } from "react-icons/md";
 
 export default function OrderSuccessModal({ onClose }) {
@@ -49,14 +49,14 @@ export default function OrderSuccessModal({ onClose }) {
         </div>
 
         {/* Primary Button */}
-        <button className="w-full bg-black text-white text-sm py-3 rounded-full mb-3 cursor-pointer">
-          Manage Subscription →
+        <button className="w-full flex items-center justify-center gap-4 bg-black text-white text-sm py-3 rounded-full mb-3 cursor-pointer">
+          Manage Subscription <FaArrowRight />
         </button>
 
         {/* Secondary Button */}
         <button
           onClick={onClose}
-          className="text-xs text-[#4A4A4A] cursor-pointer hover:underline"
+          className="text-sm text-[#4A4A4A] cursor-pointer hover:underline"
         >
           Continue Shopping
         </button>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {  FaArrowRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { FiTag } from "react-icons/fi";
 import Visa from "../assets/images/checkoutimages/visa.png";
 import MasterCard from "../assets/images/checkoutimages/mastercard.png";
@@ -34,7 +34,7 @@ export default function Checkout() {
                             <input
                                 type="text"
                                 placeholder="Enter Name"
-                                className="mt-1 w-full rounded-md bg-[#F0F0F0] px-4 py-2 text-sm outline-none"
+                                className="mt-1 w-full rounded-md bg-[#F0F0F0] px-4 py-2 text-[#4A4A4A] text-sm outline-none"
                             />
                         </div>
 
@@ -43,8 +43,8 @@ export default function Checkout() {
                             <label className="text-sm font-medium">
                                 Country<span className="text-red-500">*</span>
                             </label>
-                            <select className="mt-1 w-full rounded-md bg-[#F0F0F0] px-4 py-2 text-sm outline-none">
-                                <option>Select Country</option>
+                            <select className="mt-1 w-full rounded-md bg-[#F0F0F0]  text-[#4A4A4A]  py-2 text-sm outline-none">
+                                <option >Select Country</option>
                                 <option>Pakistan</option>
                                 <option>USA</option>
                             </select>
@@ -52,25 +52,25 @@ export default function Checkout() {
 
                         {/* Street Address */}
                         <div>
-                            <label className="text-sm font-medium">
+                            <label className="text-sm  font-medium">
                                 Street Address<span className="text-red-500">*</span>
                             </label>
                             <input
                                 type="text"
                                 placeholder="House no."
-                                className="mt-1 w-full rounded-md bg-[#F0F0F0] px-4 py-2 text-sm outline-none"
+                                className="mt-1 w-full rounded-md text-[#4A4A4A] bg-[#F0F0F0] px-4 py-2 text-sm outline-none"
                             />
                         </div>
 
                         {/* Apartment */}
                         <div>
-                             <label className="text-sm font-medium">
+                            <label className="text-sm font-medium">
                                 Apartment, floor, etc. (optional)<span className="text-red-500">*</span>
                             </label>
                             <input
                                 type="text"
                                 placeholder="Apartment/floor"
-                                className="w-full rounded-md bg-#F0F0F0 px-4 py-2 text-sm outline-none"
+                                className="w-full rounded-md text-[#4A4A4A] bg-[#F0F0F0] px-4 py-2 text-sm outline-none"
                             />
                         </div>
 
@@ -82,7 +82,7 @@ export default function Checkout() {
                             <input
                                 type="text"
                                 placeholder="Enter City"
-                                className="mt-1 w-full rounded-md bg-[#F0F0F0] px-4 py-2 text-sm outline-none"
+                                className="mt-1 w-full text-[#4A4A4A]  bg-[#F0F0F0] rounded-md px-4 py-2 text-sm outline-none"
                             />
                         </div>
 
@@ -94,7 +94,7 @@ export default function Checkout() {
                             <input
                                 type="text"
                                 placeholder="+123456789"
-                                className="mt-1 w-full rounded-md bg-[#F0F0F0] px-4 py-2 text-sm outline-none"
+                                className="mt-1 w-full text-[#4A4A4A] rounded-md bg-[#F0F0F0] px-4 py-2 text-sm outline-none"
                             />
                         </div>
 
@@ -106,7 +106,7 @@ export default function Checkout() {
                             <input
                                 type="email"
                                 placeholder="rimel111@gmail.com"
-                                className="mt-1 w-full rounded-md bg-[#F0F0F0] px-4 py-2 text-sm outline-none"
+                                className="mt-1 w-full rounded-md text-[#4A4A4A] bg-[#F0F0F0] px-4 py-2 text-sm outline-none"
                             />
                         </div>
 
@@ -171,8 +171,8 @@ export default function Checkout() {
                                 Bank
                             </label>
                             <div className="flex gap-2 text-2xl items-center">
-                               <img src={Visa} alt="Visa image" className="w-10 h-8" />
-                               <img src={MasterCard} alt="MasterCard Image" className="w-10 h-7" />
+                                <img src={Visa} alt="Visa image" className="w-10 h-8" />
+                                <img src={MasterCard} alt="MasterCard Image" className="w-10 h-7" />
                             </div>
                         </div>
 
@@ -183,7 +183,7 @@ export default function Checkout() {
                     </div>
 
                     {/* Checkout */}
-                    <button  onClick={() => setShowSuccess(true)} className="w-full mt-5 bg-black text-white py-3 rounded-full text-xs flex items-center justify-center cursor-pointer gap-4">
+                    <button onClick={() => setShowSuccess(true)} className="w-full mt-5 bg-black text-white py-3 rounded-full text-xs flex items-center justify-center cursor-pointer gap-4">
                         Place Order <FaArrowRight className="text-lg" />
                     </button>
                 </div>
