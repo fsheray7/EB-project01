@@ -5,7 +5,6 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import image1 from "../assets/images/heroImage.png";
 
 const paginationStyles = `
   .carousel-pagination {
@@ -23,12 +22,11 @@ const paginationStyles = `
     background-color: #D8A85B !important;
   }
 `;
-import image2 from "../assets/images/image2.png";
 
 const slides = [
-  { id: 1, image: image1, alt: "Hero image" },
-  { id: 2, image: image2, alt: "Second slide" },
-  { id: 3, image: image2, alt: "third slide" },
+  { id: 1, image: "/hero/image2.png", alt: "Hero image" },
+  { id: 2, image: "/hero/heroImage.png", alt: "Second slide" },
+  { id: 3, image: "/hero/image2.png", alt: "third slide" },
 ];
 
 function CarouselCard() {

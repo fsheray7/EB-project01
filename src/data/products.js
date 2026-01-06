@@ -1,12 +1,10 @@
 
-import image1 from "../assets/images/product1.png";
-import image2 from "../assets/images/product2.png";
 
 
 const products = [
   {
     id: 1,
-    image: image1,
+    image: "/products/product1.png",
     title: "Allergy Soft Chews",
     price: 132.99,
     rating:3.2,
@@ -14,7 +12,7 @@ const products = [
   },
   {
     id: 2,
-    image: image2,
+    image: "/products/product2.png",
     title: "Probiotic Soft Chews",
     price: 132.99,
     rating:2.2,
@@ -23,7 +21,7 @@ const products = [
   },
   {
     id: 3,
-    image: image1,
+    image: "/products/product1.png",
     title: "Allergy Soft Chews",
     price: 132.99,
     rating:4.2,
@@ -32,7 +30,7 @@ const products = [
   },
   {
     id: 4,
-    image:image2,
+    image:"/products/product2.png",
     title: "Probiotic Soft Chews",
     price: 132.99,
     rating:3.2,
@@ -41,7 +39,7 @@ const products = [
   },
   {
     id: 5,
-    image: image1,
+    image: "/products/product1.png",
     title: "Allergy Soft Chews",
     price: 132.99,
     rating:4.5,
@@ -50,7 +48,7 @@ const products = [
   },
   {
     id: 6,
-    image:image2,
+    image:"/products/product2.png",
     title: "Probiotic Soft Chews",
     price: 132.99,
     rating:1.2,
@@ -59,7 +57,7 @@ const products = [
   },
   {
     id: 7,
-    image: image1,
+    image: "/products/product1.png",
     title: "Allergy Soft Chews",
     price: 132.99,
     rating:3.5,
@@ -68,7 +66,7 @@ const products = [
   },
   {
     id: 8,
-    image:image2,
+    image:"/products/product2.png",
     title: "Probiotic Soft Chews",
     price: 132.99,
     rating:3.5,

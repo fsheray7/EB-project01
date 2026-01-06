@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import filter from "../assets/images/filterimg.png";
 import { CiSearch } from "react-icons/ci";
 
 export default function ProductToolbar({
@@ -60,7 +59,7 @@ export default function ProductToolbar({
           className="rounded-full bg-black flex items-center justify-center"
         >
           <img
-            src={filter}
+            src="/filterimg.png"
             alt="filter"
             className="md:w-16 md:h-9 w-8 h-8 p-2"
           />

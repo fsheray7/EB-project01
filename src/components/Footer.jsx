@@ -1,12 +1,12 @@
 import React from 'react'
 import { FaFacebookF,  FaWhatsapp , FaAmazon } from "react-icons/fa";
-import bgImg from "../assets/images/gradientBg.png"
-import Logo from "../assets/images/logo.png"
+
+
 
 export default function Footer() {
   return (
     <footer className=" mt-4 w-full bg-[url({bgImg})] bg-cover bg-center bg-no-repeatpx-4 py-10 px-8"
-    style={{ backgroundImage: `url(${bgImg})`}}>
+    style={{ backgroundImage: `url("/images/footer-bg.png")`}}>
       
       {/* MAIN FOOTER CARD */}
       <div className="font-poppins w-full rounded-3xl bg-white px-4 py-5 sm:py-6 md:py-6 lg:py-7">
@@ -15,7 +15,7 @@ export default function Footer() {
 
           {/* LOGO + DESC */}
           <div className="flex flex-col items-start gap-2">
-            <img src={Logo} alt="Logo image" className="w-24 h-10 sm:w-28 sm:h-11 md:w-24 md:h-9 lg:w-32 lg:h-12 xl:w-36 xl:h-14 object-contain" />
+            <img src="/logo.png" alt="Logo image" className="w-24 h-10 sm:w-28 sm:h-11 md:w-24 md:h-9 lg:w-32 lg:h-12 xl:w-36 xl:h-14 object-contain" />
             <p className="text-[#000000] text-xs sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-base leading-tight">
               Premium, vet-formulated supplements for dogs. Keeping tails wagging since 2025.
             </p>

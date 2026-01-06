@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/Logo2.png";
 import SocialLogin from "../components/SocialLoginHandle";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
@@ -13,7 +12,7 @@ export default function Signup() {
       <div className="min-h-screen font-poppins w-full bg-gray-10 flex flex-col">
         {/* TOP BAR */}
         <header className="w-full bg-[#e6b978] flex justify-center py-3 sm:py-4 md:py-5">
-          <img src={logo} alt="Logo" className="h-8 sm:h-10 md:h-12 lg:h-14 object-contain" />
+          <img src="/login/logo2.png" alt="Logo" className="h-8 sm:h-10 md:h-12 lg:h-14 object-contain" />
         </header>
 
         {/* CENTER AREA */}

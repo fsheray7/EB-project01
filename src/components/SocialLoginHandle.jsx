@@ -2,8 +2,6 @@ import React from "react";
 import { useGoogleLogin } from "@react-oauth/google";
 import { PublicClientApplication } from "@azure/msal-browser";
 import { MsalProvider, useMsal } from "@azure/msal-react";
-import googleIcon from "../assets/images/Google.png";
-import microsoftIcon from "../assets/images/microsoft.png";
 
 /* ======================
    MICROSOFT CONFIG
@@ -39,7 +37,7 @@ function MicrosoftLoginButton({ text }) {
       className="w-full flex items-center text-[#7E8B9E] justify-center gap-2 border border-gray-200 py-2 sm:py-2.5 md:py-3 rounded-md text-xs sm:text-sm md:text-base 2xl:text-2xl font-medium hover:bg-gray-50 transition"
     >
       <img
-        src={microsoftIcon}
+        src="/login/microsoft.png"
         className="w-4 sm:w-5 h-4 sm:h-5 2xl:w-8 2xl:h-8"
         alt="Microsoft"
       />
@@ -82,7 +80,7 @@ export default function SocialLogin({ mode = "login" }) {
         className="w-full flex items-center text-[#7E8B9E] justify-center gap-2 border border-gray-200 py-2 sm:py-2.5 md:py-3 rounded-md text-xs sm:text-sm md:text-base 2xl:text-2xl font-medium hover:bg-gray-50 transition"
       >
         <img
-          src={googleIcon}
+          src="/login/google.png"
           className="w-4 sm:w-5 h-4 sm:h-5 2xl:w-8 2xl:h-8"
           alt="Google"
         />

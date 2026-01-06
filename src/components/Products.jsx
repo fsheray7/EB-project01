@@ -1,6 +1,4 @@
 import React from "react";
-import allergyChews from "../assets/images/product1.png";
-import probioticChews from "../assets/images/product2.png";
 import { FaEye } from "react-icons/fa";
 
 const products = [
@@ -8,25 +6,25 @@ const products = [
     id: 1,
     title: "Allergy Soft Chews",
     price: "$132.93",
-    image: allergyChews,
+    image: "/product/product1.png",
   },
   {
     id: 2,
     title: "Probiotic Soft Chews",
     price: "$132.93",
-    image: probioticChews,
+    image: "/product/product2.png",
   },
   {
     id: 3,
     title: "Allergy Soft Chews",
     price: "$132.93",
-    image: allergyChews,
+    image: "/product/product1.png",
   },
   {
     id: 4,
     title: "Probiotic Soft Chews",
     price: "$132.93",
-    image: probioticChews,
+    image: "/product/product2.png",
   },
 ];
 

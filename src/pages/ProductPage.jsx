@@ -1,19 +1,17 @@
 import React, { useState } from "react";
-import image1 from "../assets/images/purchaisingpic/image1.png";
-import image2 from "../assets/images/purchaisingpic/image2.png";
-import image5 from "../assets/images/purchaisingpic/image5.png";
-import image6 from "../assets/images/purchaisingpic/image6.png";
 import { Link } from "react-router-dom";
 import ProductCard from "../components/card/ProductCard";
 import products from "../data/products";
 import ReviewsSection from "../components/reviewcomp/Reviews";
 
-const mainImage = image1;
+const mainImage = "/purchaisingpic/image1.png";
 
-const thumbnails = [
-  image2,
-  image5,
-  image6
+const thumbnails = [{
+
+  image1 :"/purchaisingpic/image2.png",
+  image5: "/purchaisingpic/image5.png",
+  image6 :"/purchaisingpic/image6.png",
+}
 ];
 
 export default function ProductPage(product) {

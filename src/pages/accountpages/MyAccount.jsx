@@ -5,6 +5,9 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Profile from "./Profile";
 import AddressBook from "./AddressBook";
 import PaymentOptions from "./PaymentOptions";
+import ActiveSubscriptions from "./ActiveSubscriptions";
+import PausedSubscriptions from "./PausedSubscription";
+import CancelledSubscriptions from "./CancelledSubscriptions";
 
 export default function MyAccount() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -12,8 +15,12 @@ export default function MyAccount() {
   const location = useLocation();
 
   // Determine active page based on the current URL path
-  const activePage = location.pathname === "/address" ? "address" 
-    : location.pathname === "/payment" ? "payment" 
+  const activePage = 
+      location.pathname === "/address" ? "address" 
+    : location.pathname === "/payment" ? "payment" :
+    location.pathname === "/subscription-active" ? "subscription-active"
+    : location.pathname === "/subscription-paused" ? "subscription-paused"
+    : location.pathname === "/subscription-cancelled" ? "subscription-cancelled"
     : "profile";
 
   const renderContent = () => {
@@ -24,6 +31,13 @@ export default function MyAccount() {
         return <AddressBook />;
       case "payment":
         return <PaymentOptions />;
+        case "subscription-active":
+          return <ActiveSubscriptions />;
+          case "subscription-paused":
+          return <PausedSubscriptions />;
+          case "subscription-cancelled":
+          return <CancelledSubscriptions />;
+
       default:
         return <Profile />;
     }
@@ -112,8 +126,34 @@ export default function MyAccount() {
                 My Subscriptions
               </h4>
               <ul className="space-y-1 text-sm text-[#4A4A4A] cursor-pointer">
-                <li>Active</li>
-                <li>Paused</li>
+                <li  onClick={() => {
+                    navigate("/subscription-active");
+                    setIsSidebarOpen(false);
+                  }}
+                  className={`cursor-pointer ${
+                    activePage === "subscription-active"
+                      ? "text-[#D8A85B] font-medium"
+                      : "text-[#4A4A4A]"
+                  }`}>Active</li>
+
+                <li onClick={() => {
+                    navigate("/subscription-paused");
+                    setIsSidebarOpen(false);
+                  }}
+                  className={`cursor-pointer ${
+                    activePage === "subscription-paused"
+                      ? "text-[#D8A85B] font-medium"
+                      : "text-[#4A4A4A]"
+                  }`} >Paused</li>
+
+                <li onClick={() => {
+                  navigate("/subscription-cancelled");
+                  setIsSidebarOpen(false);
+                }} className={`cursor-pointer ${
+                  activePage === "subscription-cancelled"
+                    ? "text-[#D8A85B] font-medium"
+                    : "text-[#4A4A4A]"
+                }`}>Cancelled</li>
               </ul>
             </div>
           </div>

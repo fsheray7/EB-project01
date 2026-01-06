@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 
-import logo from "../assets/images/logo.png";
-import cartImage from "../assets/images/cartImage.png";
 import { FaRegUser } from "react-icons/fa";
 
 export default function Navbar() {
@@ -28,7 +26,7 @@ export default function Navbar() {
 
         {/* LOGO */}
         <img
-          src={logo}
+          src="/logo.png"
           alt="logo"
           onClick={() => navigate("/")}
           className="w-[80px] h-[35px] lg:w-[90px] lg:h-[32px] cursor-pointer"
@@ -62,7 +60,7 @@ export default function Navbar() {
           <button onClick={handleLogin} className="px-8 py-2 text-sm rounded-full bg-[#4C9E84] text-white font-medium hover:bg-teal-600 transition">
             SIGN IN
           </button>
-          <img src={cartImage} alt="cart" className="w-5 h-5 cursor-pointer" />
+          <img src="/cartImage.png" alt="cart" className="w-5 h-5 cursor-pointer" />
           <FaRegUser onClick={handleProfile} className="cursor-pointer" />
         </div>
 
@@ -84,7 +82,7 @@ export default function Navbar() {
               SIGN IN
             </button>
           </ul>
-          <img src={cartImage} alt="cart" className="mr-3 mb-4 w-6 h-6 sm:w-7 sm:h-7 cursor-pointer" />
+          <img src="/cartImage.png" alt="cart" className="mr-3 mb-4 w-6 h-6 sm:w-7 sm:h-7 cursor-pointer" />
         </div>
       )}
     </nav>

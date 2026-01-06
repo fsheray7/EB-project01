@@ -1,6 +1,4 @@
 import React from "react";
-import dogImage from "../assets/images/Dog.png";
-import pawsPattern from "../assets/images/Paws.png";
 import { FaArrowRight } from "react-icons/fa";
 
 function Banner() {
@@ -10,7 +8,7 @@ function Banner() {
       <div
         className="absolute inset-0 opacity-110"
         style={{
-          backgroundImage: `url(${pawsPattern})`,
+          backgroundImage: `url("/banner/paws.png")`,
           backgroundRepeat: "repeat",
           backgroundSize: "1400px",
         }}
@@ -26,7 +24,7 @@ function Banner() {
         {/* Desktop Dog Image */}
         <div className="hidden md:block absolute md:bottom-0  left-0">
           <img
-            src={dogImage}
+            src="/banner/dog.png"
             alt="Dog"
             className="
               object-contain
@@ -122,7 +120,7 @@ function Banner() {
       {/* Mobile Dog Image (UNCHANGED) */}
       <div className="md:hidden flex justify-center mt-8 pb-0">
         <img
-          src={dogImage}
+          src="/banner/dog.png"
           alt="Dog"
           className="w-[220px] h-[130px] 
          

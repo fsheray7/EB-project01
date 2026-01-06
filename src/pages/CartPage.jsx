@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { HiTrash } from "react-icons/hi2";
-import productImg from "../assets/images/product1.png"; // adjust path
+import { HiTrash } from "react-icons/hi2"; // adjust path
 import { FaArrowRight, } from "react-icons/fa";
 import { FiTag } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
@@ -30,7 +29,7 @@ export default function Cart() {
           <div className="flex items-center gap-4">
             {/* Product Image */}
             <img
-              src={productImg}
+              src="/products/product1.png"
               alt="Allergy Soft Chews"
               className="w-30 h-30 object-contain "
             />

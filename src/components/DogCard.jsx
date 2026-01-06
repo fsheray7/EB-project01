@@ -1,6 +1,5 @@
 import React from "react";
-import dog from "../assets/images/dogpic2.png";
-import bone from "../assets/images/bone.png";
+
 
 function DogCard() {
   return (
@@ -32,7 +31,7 @@ function DogCard() {
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3 sm:gap-4">
                   <img
-                    src={bone}
+                    src="/dogcard/bone.png"
                     alt=""
                     className="w-[clamp(1.5rem,3vw,2.5rem)] h-[clamp(1.5rem,3vw,2.5rem)] flex-shrink-0"
                   />
@@ -53,7 +52,7 @@ function DogCard() {
           {/* RIGHT IMAGE */}
           <div className="flex-shrink-0 w-full sm:w-[clamp(12rem,35vw,28rem)]">
             <img
-              src={dog}
+              src="/dogcard/dogpic2.png"
               alt="Dog"
               className="w-full h-auto object-contain"
             />

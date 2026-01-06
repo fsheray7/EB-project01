@@ -10,8 +10,7 @@ import ProductPage from './pages/ProductPage.jsx';
 import Cart from './pages/CartPage.jsx';
 import Checkout from './pages/Checkout.jsx';
 import MyProfile from './pages/accountpages/MyAccount.jsx';
-import AddressBook from './pages/accountpages/AddressBook.jsx';
-import PaymentOptions from './pages/accountpages/PaymentOptions.jsx';
+
 
 
 function App() {
@@ -29,6 +28,9 @@ function App() {
     <Route path="/profile" element={<MyProfile />} />
     <Route path='/address' element = {<MyProfile /> } />
     <Route path='/payment' element ={<MyProfile /> } />
+    <Route path='/subscription-active' element ={<MyProfile />} />
+    <Route path='/subscription-paused' element ={<MyProfile />} />
+    <Route path='/subscription-cancelled' element ={<MyProfile />} />
       </Route>
     <Route path="/login" element={<Login />} />
     <Route path="/signup" element={<Signup />} />
