@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {  FaArrowRight } from "react-icons/fa";
 import { FiTag } from "react-icons/fi";
-import Visa from "../assets/images//checkoutimages/visa.png";
+import Visa from "../assets/images/checkoutimages/visa.png";
 import MasterCard from "../assets/images/checkoutimages/mastercard.png";
 import OrderSuccessModal from "../components/checkoutmodal/OderSuccess";
 
