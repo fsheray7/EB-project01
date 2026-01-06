@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { FiTag } from "react-icons/fi";
 import Visa from "../assets/images/checkoutimages/visa.png";
-import MasterCard from "../assets/images/checkoutimages/mastercard.png";
+import Mastercard from "../assets/images/checkoutimages/mastercard.png"
 import OrderSuccessModal from "../components/checkoutmodal/OderSuccess";
 
 
@@ -172,7 +172,7 @@ export default function Checkout() {
                             </label>
                             <div className="flex gap-2 text-2xl items-center">
                                 <img src={Visa} alt="Visa image" className="w-10 h-8" />
-                                <img src={MasterCard} alt="MasterCard Image" className="w-10 h-7" />
+                                <img src={Mastercard} alt="MasterCard Image" className="w-10 h-7" />
                             </div>
                         </div>
 
