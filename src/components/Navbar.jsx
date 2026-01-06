@@ -1,16 +1,24 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 
 import logo from "../assets/images/logo.png";
 import cartImage from "../assets/images/cartImage.png";
+import { FaRegUser } from "react-icons/fa";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogin = () => {
     navigate("/login");
+    setOpen(false); // mobile menu close
+  };
+
+  // Profile
+  const handleProfile = () => {
+    navigate("/profile");
     setOpen(false); // mobile menu close
   };
 
@@ -28,10 +36,25 @@ export default function Navbar() {
 
         {/* DESKTOP MENU */}
         <ul className="hidden lg:flex items-center font-semibold gap-6 lg:gap-8 text-sm text-gray-700">
-          <li onClick={() => navigate("/")} className="text-[#D8A85B] hover:text-[#D8A85] cursor-pointer">HOME</li>
-          <li className="hover:text-[#D8A85B] cursor-pointer">SHOP</li>
-          <li className="hover:text-[#D8A85B] cursor-pointer">BLOGS</li>
-          <li className="hover:text-[#D8A85B] cursor-pointer">CONTACT US</li>
+          <li onClick={() => navigate("/")} className={`cursor-pointer ${location.pathname === "/" ? "text-[#D8A85B]" : "text-gray-700 hover:text-[#D8A85B]"}`}>HOME</li>
+          <li
+            onClick={() => navigate("/shop")}
+            className={`cursor-pointer ${location.pathname === "/shop" ? "text-[#D8A85B]" : "text-gray-700 hover:text-[#D8A85B]"}`}
+          >
+            SHOP
+          </li>
+          <li
+            onClick={() => navigate("/blog")}
+            className={`cursor-pointer ${location.pathname === "/blog" ? "text-[#D8A85B]" : "text-gray-700 hover:text-[#D8A85B]"}`}
+          >
+            BLOGS
+          </li>
+ <li
+            onClick={() => navigate("/contact")}
+            className={`cursor-pointer ${location.pathname === "/contact" ? "text-[#D8A85B]" : "text-gray-700 hover:text-[#D8A85B]"}`}
+          >
+            CONTACT US
+          </li>
         </ul>
 
         {/* DESKTOP RIGHT */}
@@ -40,6 +63,7 @@ export default function Navbar() {
             SIGN IN
           </button>
           <img src={cartImage} alt="cart" className="w-5 h-5 cursor-pointer" />
+          <FaRegUser onClick={handleProfile} className="cursor-pointer" />
         </div>
 
         {/* MOBILE TOGGLE */}
@@ -52,8 +76,8 @@ export default function Navbar() {
       {open && (
         <div className="lg:hidden flex justify-between py-2 border-t bg-white">
           <ul className="flex flex-col gap-3 sm:gap-4 px-4 sm:px-6  sm:py-5 text-sm sm:text-base font-medium text-gray-700">
-            <li onClick={() => { navigate("/"); setOpen(false); }} className="cursor-pointer">HOME</li>
-            <li className="cursor-pointer">SHOP</li>
+            <li onClick={() => { navigate("/"); setOpen(false); }} className={`cursor-pointer ${location.pathname === "/" ? "text-[#D8A85B]" : "text-gray-700"}`}>HOME</li>
+            <li onClick={() => { navigate("/shop"); setOpen(false); }} className={`cursor-pointer ${location.pathname === "/shop" ? "text-[#D8A85B]" : "text-gray-700"}`}>SHOP</li>
             <li className="cursor-pointer">BLOGS</li>
             <li className="cursor-pointer">CONTACT US</li>
             <button onClick={handleLogin} className="mt-4 sm:mt-5 w-fit px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-teal-400 text-white text-xs sm:text-sm font-medium">

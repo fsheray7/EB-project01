@@ -26,7 +26,7 @@ function PricingSection() {
 
         {/* Cards */}
         <div className="flex relative justify-center items-center">
-          <div className=" grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-8 max-w-7xl w-full px-4 sm:px-6 lg:px-8">
+          <div className=" grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-8  w-full px-4 sm:px-6 lg:px-8">
           {plans.map((plan, index) => (
             <div
               key={index}
@@ -35,20 +35,21 @@ function PricingSection() {
                 flex flex-col
                 justify-center
                 items-center
-                text-center
+                text-center 
+                border border-[#8E64EB]
                 w-full
                 h-auto
                 md:h-[300px]
                 lg:h-[400px]
                 xl:h-[380px]
                 rounded-[28px]
-                bg-gradient-to-b from-[#B894FF] via-[#9C79F2] to-[#6A3FC6]
+                bg-gradient-to-b from-[#3F3357]  to-[#080510]
                 px-4 sm:px-6
                 py-8 sm:py-10 md:py-6 lg:py-8
               "
             >
               {/* Title */}
-              <h3 className="text-white font-semibold
+              <h3 className="text-white mt-0 font-semibold
               text-xl
               sm:text-2xl
               md:text-lg

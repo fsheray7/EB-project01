@@ -43,8 +43,8 @@ function FAQSection() {
         {/* HEADER */}
         <div className="text-center mb-12">
           <h2
-            className="
-               font-abeezee text-[#000000]leading-tight
+            className=" px-8
+               font-abeezee text-[#000000] leading-tight
               text-[25px]
               md:text-[30px]
               lg:text-[30px]
@@ -52,7 +52,7 @@ function FAQSection() {
               2xl:text-[40px]
             "
           >
-            Everything You Need to <br className="hidden sm:block" />
+            Everything You Need to 
             Know About Us
           </h2>
 
