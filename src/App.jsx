@@ -10,6 +10,9 @@ import ProductPage from './pages/ProductPage.jsx';
 import Cart from './pages/CartPage.jsx';
 import Checkout from './pages/Checkout.jsx';
 import MyProfile from './pages/accountpages/MyAccount.jsx';
+import Blogs from './pages/Blogs.jsx';
+import BlogDetail from './pages/BlogDetail.jsx';
+import Contact from './pages/ContactPage.jsx';
 
 
 
@@ -22,6 +25,9 @@ function App() {
       <Route element={<MainLayout />}>
     <Route path="/" element={<Home />} />
     <Route path="/shop" element={<Shop />} />
+    <Route path='/blog' element={<Blogs />}/>
+    <Route path='/blog/:slug' element= {<BlogDetail />} />
+    <Route path='/contact' element={<Contact />} />
     <Route path="/product/:id" element={ <ProductPage /> } />
     <Route path="/cart" element={<Cart />} />
     <Route path="/checkout" element={<Checkout />} />

@@ -90,7 +90,7 @@ function Banner() {
 
           <button
             className="
-              mt-6
+              mt-8
               inline-flex items-center gap-2
               bg-white text-[#A43B5B]
               font-semibold
@@ -106,10 +106,7 @@ function Banner() {
              lg:px-[30px]
              xl:py-[12px]
              xl:px-[30px]
-              text-[clamp(1rem,1vw,1rem)]
-              md:text-[clamp(1rem,1.4vw,2rem)]
-              lg:text-[clamp(1rem,1.4vw,2.2rem)]
-              xl:text-[clamp(1rem,1.4vw,2.2rem)]
+              
             "
           >
             Shop Now <FaArrowRight className="text-lg text-[#D8A85B]" /> 

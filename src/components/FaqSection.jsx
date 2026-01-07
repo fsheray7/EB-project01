@@ -38,14 +38,15 @@ function FAQSection() {
 
   return (
     <section className="w-full font-poppins bg-[#F6F6F6] py-16 px-8 sm:px-10 md:px-15 lg:px-20 xl:px-40 2xl:px-40 font-poppins">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" px-4 sm:px-6 lg:px-8">
 
         {/* HEADER */}
-        <div className="text-center mb-12">
+        <div className="text-center px-4 mb-12">
           <h2
-            className=" px-8
+            className=" 
                font-abeezee text-[#000000] leading-tight
-              text-[25px]
+              text-[18px]
+              sm:text-[20]
               md:text-[30px]
               lg:text-[30px]
               xl:text-[30px]
@@ -58,8 +59,8 @@ function FAQSection() {
 
           <p
             className="
-              mt-4 mx-auto text-[#4A4A4A]
-              max-w-[clamp(30rem,55vw,75rem)]
+              mt-4  text-[#4A4A4A]
+              
               text-[12px]
               md:text-[14px]
               lg:text-[16px]
@@ -94,8 +95,8 @@ function FAQSection() {
                 }
                 className="
                   w-full flex justify-between  items-center text-left
-                  px-[clamp(1px,2vw,60px)]
-                  py-[clamp(4px,1.6vw,20px)]
+                  px-2
+                  py-2
                   
 
                 "
@@ -125,11 +126,11 @@ function FAQSection() {
                     ${
                       activeIndex === index
                         ? " text-[#D8A85B]  text-[20px]"
-                        : "border-gray-800   text-[16px] text-white-600"
+                        : "border-gray-800   text-[16px] "
                     }
                   `}
                 >
-                  {activeIndex === index ? "−" : "+"}
+                  {activeIndex === index ? "-" : "+"}
                 </span>
               </button>
 

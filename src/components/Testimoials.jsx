@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 
 const testimonials = [
-  { id: 1, name: "Jack", text: "WellFetch's AI vet helped me pick the right probiotic. The delivery is always on time. Highly recommend.", avatar: "testimonialImages/testImg1" },
+  { id: 1, name: "Jack", text: "WellFetch's AI vet helped me pick the right probiotic. The delivery is always on time. Highly recommend.", avatar: "/testimonialImages/testImg1.png" },
   { id: 2, name: "Jaydon Bator", text: "The subscription model is a lifesaver. I never run out of the allergy chews, and Alfie has stopped scratching completely!", avatar: "testimonialImages/testImg2.png" },
   { id: 3, name: "Jenny Doe", text: "Fantastic quality and fast shipping. My dog absolutely loves the chews!", avatar: "/testimonialImages/testImg3.png" },
   { id: 4, name: "Alex Smith", text: "I noticed visible improvements in my dog's digestion within weeks.", avatar: "https://i.pravatar.cc/100?img=18" },
@@ -213,14 +213,14 @@ function Testimonials() {
       className=" rounded-full  flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg border border-white/20 text-[clamp(1rem,1.5vw,5rem)]"
       aria-label="Previous testimonial"
     >
-     <img src="/leftarrow.png" alt="" className="w-[clamp(3rem,4.5vw,4rem)] h-[clamp(3rem,4.5vw,4rem)]"/>
+     <img src="/leftarrow.png" alt="" className="w-10 h-10"/>
     </button>
     <button
       onClick={nextSlide}
       className=" rounded-full text-black flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg border border-white/20 text-[clamp(1rem,1.5vw,5rem)]"
       aria-label="Next testimonial"
     >
-       <img src="/rightarrow.png" alt="" className="w-[clamp(3rem,4.5vw,4rem)] h-[clamp(3rem,4.5vw,4rem)]"/>
+       <img src="/rightarrow.png" alt="" className="w-10 h-10"/>
     </button>
   </div>
 </div>

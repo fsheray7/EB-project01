@@ -27,9 +27,9 @@ export default function ProductToolbar({
   };
 
   return (
-    <div className="mt-8 px-3 flex gap-4 sm:items-center sm:justify-between">
+    <div className="mt-8 px-3 flex flex-col  md:flex-row gap-4 sm:items-center sm:justify-between">
       {/* SEARCH */}
-      <div className="relative w-2/4 md:w-full">
+      <div className="relative  md:w-2/3 w-full">
         <input
           type="text"
           placeholder="Search for products..."
@@ -43,11 +43,11 @@ export default function ProductToolbar({
       </div>
 
       {/* RIGHT CONTROLS */}
-      <div className="flex items-center gap-2 relative" ref={dropdownRef}>
+      <div className="flex items-center justify-end mt-2 gap-2 relative" ref={dropdownRef}>
         <select
           value={sortType}
           onChange={handleSelectChange}
-          className="rounded-full bg-black px-4 py-2 text-white text-sm focus:outline-none"
+          className="rounded-full bg-black px-4 py-1 md:py-2 text-white text-sm focus:outline-none"
         >
           <option value="latest">Latest</option>
           <option value="popular">Popular</option>
@@ -61,7 +61,7 @@ export default function ProductToolbar({
           <img
             src="/filterimg.png"
             alt="filter"
-            className="md:w-16 md:h-9 w-8 h-8 p-2"
+            className="md:w-10 md:h-9 w-8 h-8 p-2"
           />
         </button>
 

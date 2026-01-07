@@ -62,7 +62,7 @@ function SubscriptionCard({ image, order, title, frequency, date, price }) {
         <div >
 
           {/* CONTENT */}
-          <div className="flex justify-between items-center ">
+          <div className="flex  items-center ">
             <div>
 
               <p className="text-[12px] text-[#9B9B9B] mb-1">
@@ -73,7 +73,7 @@ function SubscriptionCard({ image, order, title, frequency, date, price }) {
                 {title}
               </h3>
 
-              <p className="text-sm text-[#00000099] mt-1">
+              <p className="text-xs  md:text-sm  text-[#00000099] mt-1">
                 {frequency} <span className="text-[#000000] font-bold">{date}</span>
               </p>
             </div>
@@ -83,7 +83,7 @@ function SubscriptionCard({ image, order, title, frequency, date, price }) {
               <p className="text-sm font-semibold text-red-500">
                 {price}
               </p>
-              <p className="text-[14px] text-[#00000099]">
+              <p className=" text-xs  md:text-[14px] text-[#00000099]">
                 Per Delivery
               </p>
             </div>
@@ -121,7 +121,7 @@ function SubscriptionCard({ image, order, title, frequency, date, price }) {
 
       </div>
           {/* ACTIONS */}
-          <div className="flex items-center justify-center flex-wrap gap-2 mt-6">
+          <div className="flex items-center justify-center flex-col sm:flex-row lg:flex-row xl:flex-row 2xl:flex-row gap-4 mt-6">
             <button className="text-xs px-3 py-2 rounded-full border font-semibold border-[#00000033] text-[#9B9B9B]">
               Skip Next Delivery
             </button>

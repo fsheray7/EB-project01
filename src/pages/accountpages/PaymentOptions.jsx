@@ -88,7 +88,7 @@ export default function PaymentOptions() {
               type="submit"
               className="bg-[#D8A85B] hover:bg-[#D8A85B] transition text-white text-sm px-6 py-2 rounded-md"
             >
-              Save Changes
+              Add Card
             </button>
           </div>
         </form>

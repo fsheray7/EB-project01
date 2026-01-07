@@ -6,13 +6,11 @@ import ReviewsSection from "../components/reviewcomp/Reviews";
 
 const mainImage = "/purchaisingpic/image1.png";
 
-const thumbnails = [{
+const thumbnails = [
 
-  image1 :"/purchaisingpic/image2.png",
-  image5: "/purchaisingpic/image5.png",
-  image6 :"/purchaisingpic/image6.png",
-}
-];
+  "/purchaisingpic/image2.png",
+  "/purchaisingpic/image5.png",
+  "/purchaisingpic/image6.jpg"    ]
 
 export default function ProductPage(product) {
   const [displayImage, setDisplayImage] = useState(mainImage);
@@ -37,28 +35,46 @@ export default function ProductPage(product) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
 
         {/* LEFT – IMAGE GALLERY */}
-        <div className="flex flex-col-reverse lg:flex-row gap-4 items-start">
-          <div className="flex lg:flex-col gap-4 justify-start items-center flex-1 lg:flex-none lg:w-[clamp(60px,10vw,100px)]">
-            {thumbnails.map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                alt="thumbnail"
-                onClick={() => setDisplayImage(img)}
-                className={`w-full aspect-square md:w-[clamp(60px,10vw,100px)] lg:w-[clamp(60px,8vw,90px)] object-cover rounded-2xl border cursor-pointer 
-                ${displayImage === img ? "border-black" : "border-gray-300"}`}
-              />
-            ))}
-          </div>
+       <div className="flex flex-col-reverse lg:flex-row items-start gap-4">
 
-          <div className="flex-1">
-            <img
-              src={displayImage}
-              alt="Product"
-              className="w-full h-[350px] sm:h-[420px] lg:h-[520px] object-contain  rounded-xl"
-            />
-          </div>
+  {/* THUMBNAILS */}
+  <div className="w-full  p-4">
+      <div className="flex flex-col-reverse lg:flex-row gap-4 items-start">
+
+        {/* LEFT SIDE THUMBNAILS */}
+        <div className="flex lg:flex-col gap-3 w-full lg:w-[120px]">
+          {thumbnails.map((img, i) => (
+            <div
+              key={i}
+              onClick={() => setDisplayImage(img)}
+              className={`cursor-pointer rounded-2xl overflow-hidden border 
+                ${displayImage === img ? "border-[#D89F3D]" : "border-[#E6E6E6]"}`}
+            >
+              <img
+                src={img}
+                alt=""
+                className="w-full h-24 sm:h-28 lg:h-30   object-fit"
+              />
+            </div>
+          ))}
         </div>
+
+        {/* MAIN IMAGE */}
+        <div className="flex-1 rounded-xl py-2   overflow-hidden border border-[#E6E6E6]">
+          <img
+            src={displayImage}
+            alt="Selected"
+            className="w-full h-[300px] sm:h-[380px] md:h-[380px] lg:h-[370px] object-fit object-contain rounded-xl bg-white"
+          />
+        </div>
+
+      </div>
+    </div>
+
+  
+  
+</div>
+
 
         {/* RIGHT – PRODUCT INFO */}
         <div className="space-y-5">
@@ -73,7 +89,7 @@ export default function ProductPage(product) {
 
           <div className="flex gap-4 items-center" >
 
-            <p className=" items-center gap-2 text-2xl font-semibold">$100 <span className="text-[#0000004D] line-through text-2xl">$130</span> </p><span className=" py-2 px-4 bg-[#FF33331A] rounded-full text-center text-sm text-[#FF3333]">-20%</span>
+            <p className=" items-center gap-2 text-2xl font-semibold">$100 <span className="text-[#0000004D] line-through text-2xl">$139</span> </p><span className=" py-2 px-4 bg-[#FF33331A] rounded-full text-center text-sm text-[#FF3333]">-20%</span>
           </div>
 
           <p className="text-[#00000099] leading-relaxed">

@@ -1,13 +1,13 @@
 import React from 'react'
-import { FaFacebookF,  FaWhatsapp , FaAmazon } from "react-icons/fa";
+import { FaFacebookF, FaWhatsapp, FaAmazon } from "react-icons/fa";
 
 
 
 export default function Footer() {
   return (
-    <footer className=" mt-4 w-full bg-[url({bgImg})] bg-cover bg-center bg-no-repeatpx-4 py-10 px-8"
-    style={{ backgroundImage: `url("/images/footer-bg.png")`}}>
-      
+    <footer className=" mt-4 w-full font-poppins bg-[url({bgImg})] bg-cover bg-center bg-no-repeatpx-4 py-10 px-8"
+      style={{ backgroundImage: `url("/footer/gradientBg.png")` }}>
+
       {/* MAIN FOOTER CARD */}
       <div className="font-poppins w-full rounded-3xl bg-white px-4 py-5 sm:py-6 md:py-6 lg:py-7">
         {/* 4 Column Layout */}
@@ -60,8 +60,8 @@ export default function Footer() {
                 Manchester, M1 2AB United Kingdom
               </p>
             </div>
-             {/* SOCIAL ICONS */}
-        <div className="flex py-3 items-start justify-center gap-2">
+            {/* SOCIAL ICONS */}
+            <div className="flex py-3 items-start justify-center gap-2">
               {[FaAmazon, FaWhatsapp, FaFacebookF].map((Icon, i) => (
                 <div
                   key={i}
@@ -70,65 +70,64 @@ export default function Footer() {
                   <Icon size={16} />
                 </div>
               ))}
-        </div>
+            </div>
           </div>
         </div>
 
-       
+
       </div>
 
       {/* GRADIENT STRIP */}
-      
-        <div className="flex mt-12 flex-col gap-6 lg:flex-row md:flex-row lg:items-center lg:justify-between">
-          
-          <h3 className="w-full  font-bold 
-           text-[clamp(1rem,1.5vw,2rem)]
-           md:text-[clamp(1.5rem,1vw,2rem)]
-           lg:text-[clamp(2rem,1.5vw,4rem)]
-           xl:text-[clamp(2rem,1.5vw,4rem)]
+
+      <div className="flex mt-12 items-center justify-center  flex-col gap-6 lg:flex-row md:flex-row lg:items-center lg:justify-between">
+
+        <h3 className="w-full  font-bold 
+           text-lg sm:text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-xl
              text-white">
-            Get 10% off your first order plus expert dog health tips.
-          </h3>
+          Get 10% off your first order plus expert dog health tips.
+        </h3>
 
-          <div className= " border border-white relative mt-10 flex w-full  text-[clamp(1rem,1.5vw,2rem)] items-center rounded-[18px] border-[2px solid white] bg-white/20 px-4  sm:py-4 md:py-4 lg:py-4 xl:py-4 backdrop-blur">
-          <h2 className='absolute 
-           text-lg
-           2xl:text-2xl
-           
-          bottom-10
-          sm:bottom-18
-          md:bottom-20
-          lg:bottom-25
-          xl:bottom-25
-           2xl:bottom-30 z-100 font-bold text-white' >Join The Pack</h2>
-          <p 
-      className="absolute hidden md:block lg:block xl:block 2xl:block top-[-clamp(1rem,1vw,2.2rem)] left-[clamp(1rem,2vw,2rem)] text-[clamp(0.75rem,1vw,1rem)] 2xl:text-[clamp(0.75rem,1vw,1rem)] bottom-12
-       sm:bottom-13
-       md:bottom-12
-       lg:bottom-12
-       xl:bottom-16
-       2xl:bottom-16
-        text-white  uppercase"
-    >
-      YOUR EMAIL
+       <div className="relative mt-10 w-full  ">
+
+  {/* OUTER GRADIENT BORDER */}
+  <div className="absolute inset-0 rounded-[18px] bg-[#FFFFFF]"></div>
+
+  {/* INNER WHITE CARD */}
+  <div className="relative flex items-center bg-white/15 backdrop-blur-md rounded-[18px] border border-white px-4 ">
+
+    {/* TITLE LEFT */}
+    <h2 className="absolute -top-[1.8rem] left-1 text-white 
+      text-sm tracking-wide">
+      Join the pack
+    </h2>
+
+    {/* LABEL ABOVE INPUT */}
+    <p className="absolute bottom-10 left-4 text-[10px] tracking-widest uppercase font-semibold text-[#4A4A4A]">
+      Your Email
     </p>
-            <input
-              type="email"
-              placeholder="@gmail.com"
 
-              className="w-full w-[100%] bg-transparent text-white   placeholder-white outline-none"
-            />
-           <button className="ml-[clamp(0.5rem,1vw,1rem)] text-white text-[clamp(1.5rem,2.5vw,3rem)]">
+    {/* INPUT */}
+    <input
+      type="email"
+      placeholder="@gmail.com"
+      className="w-full mt-6 bg-transparent text-[#000000] placeholder-[#000000] text-[clamp(0.9rem,1vw,1.1rem)] outline-none"
+    />
+
+    {/* SEND BUTTON */}
+    <button className="ml-2 mt-6 text-[#000000] text-[clamp(1.4rem,2vw,2.2rem)] font-light">
       →
     </button>
-          </div>
-        </div>
 
-       <div className="mt-[clamp(2rem,4vw,2rem)] flex  gap-[clamp(0.5rem,1vw,1rem)] text-[clamp(0.8rem,1.2vw,3rem)] text-white/80  justify-between ">
-    <span>© 2025 — Copyright</span>
-    <span>Privacy</span>
   </div>
-      
+</div>
+
+      </div>
+
+      <div className="mt-[clamp(2rem,4vw,2rem)] flex  gap-[clamp(0.5rem,1vw,1rem)] text-[clamp(0.8rem,1.2vw,3rem)] text-white/80  justify-between ">
+        <span>© 2025 — Copyright</span>
+        <span>Privacy</span>
+      </div>
+
     </footer>
   );
 }

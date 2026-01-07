@@ -2,19 +2,20 @@ import React from "react";
 import { FaCheck } from "react-icons/fa";
 
 const plans = [
-  { title: "Monthly Plan", price: "$29/Month" },
-  { title: "Quarterly Plan", price: "$79/Month" },
-  { title: "Annual Plan", price: "$279/Month" },
+  { title: "Monthly Plan", price: "$700/Month" },
+  { title: "Quarterly Plan", price: "$650/Month" },
+  { title: "Annual Plan", price: "$450/Month" },
 ];
 
 function PricingSection() {
   return (
-    <section className="w-full bg-[#191A20] py-20 px-8">
+    <section className="w-full bg-[#191A20] font-poppins py-20 px-8">
       <div className="w-full ">
 
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-white  text-[clamp(1.8rem,3vw,3.2rem)]">
+          <h2 className="text-white font-abeezee
+            text-[clamp(1.8rem,3vw,3.2rem)]">
             Get Monthly Deliveries and <br /> Save More
           </h2>
 
@@ -25,7 +26,7 @@ function PricingSection() {
         </div>
 
         {/* Cards */}
-        <div className="flex relative justify-center items-center">
+        <div className="flex relative  justify-center items-center">
           <div className=" grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-8  w-full px-4 sm:px-6 lg:px-8">
           {plans.map((plan, index) => (
             <div
@@ -45,7 +46,7 @@ function PricingSection() {
                 rounded-[28px]
                 bg-gradient-to-b from-[#3F3357]  to-[#080510]
                 px-4 sm:px-6
-                py-8 sm:py-10 md:py-6 lg:py-8
+                py-6 sm:py-10 md:py-6 lg:py-8
               "
             >
               {/* Title */}
@@ -73,7 +74,7 @@ function PricingSection() {
               </p>
 
               {/* Features */}
-              <ul className="mt-4 sm:mt-6 md:mt-3 lg:mt-6 flex flex-col space-y-2 w-full text-left pl-6 sm:pl-8 md:pl-4 lg:pl-6
+              <ul className="m-6 sm:m-6 md:m-3 lg:m-6 flex flex-col space-y-2 w-full text-left pl-6 sm:pl-8 md:pl-4 lg:pl-6
               ">
                 <li className="flex items-center gap-2 sm:gap-3 text-white
                 text-sm

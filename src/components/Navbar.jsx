@@ -76,14 +76,20 @@ export default function Navbar() {
           <ul className="flex flex-col gap-3 sm:gap-4 px-4 sm:px-6  sm:py-5 text-sm sm:text-base font-medium text-gray-700">
             <li onClick={() => { navigate("/"); setOpen(false); }} className={`cursor-pointer ${location.pathname === "/" ? "text-[#D8A85B]" : "text-gray-700"}`}>HOME</li>
             <li onClick={() => { navigate("/shop"); setOpen(false); }} className={`cursor-pointer ${location.pathname === "/shop" ? "text-[#D8A85B]" : "text-gray-700"}`}>SHOP</li>
-            <li className="cursor-pointer">BLOGS</li>
+
+            <li  onClick={() => { navigate("/blog"); setOpen(false); }} className={`cursor-pointer ${location.pathname === "/blog" ? "text-[#D8A85B]" : "text-gray-700"}`}>BLOGS</li>
+
             <li className="cursor-pointer">CONTACT US</li>
             <button onClick={handleLogin} className="mt-4 sm:mt-5 w-fit px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-teal-400 text-white text-xs sm:text-sm font-medium">
               SIGN IN
             </button>
           </ul>
+          
+          <div>
+
           <img src="/cartImage.png" alt="cart" className="mr-3 mb-4 w-6 h-6 sm:w-7 sm:h-7 cursor-pointer" />
           <FaRegUser onClick={handleProfile} className="mr-3 mb-4 w-6 h-6 sm:w-7 sm:h-7 cursor-pointer" />
+          </div>
         </div>
       )}
     </nav>
