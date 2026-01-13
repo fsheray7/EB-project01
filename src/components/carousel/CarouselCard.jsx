@@ -31,7 +31,7 @@ const slides = [
 
 function CarouselCard() {
   return (
-    <section className="mt-10 w-full overflow-hidden ">
+    <section className="mt-6 w-full overflow-hidden ">
       <style>{paginationStyles}</style>
       <div
         className="
