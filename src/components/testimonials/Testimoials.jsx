@@ -40,7 +40,7 @@ function Testimonials() {
       <div
         className="absolute w-full inset-0 bg-[#1f243d] bg-repeat opacity-50"
         style={{
-          backgroundImage: `url("testimonialImages/paws.png")`,
+          backgroundImage: `url("testimonialImages/Paws.png")`,
           backgroundSize: "1600px auto",
           backgroundPosition: "fit",
         }}
