@@ -1,23 +1,35 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { FiTag } from "react-icons/fi";
 
-import OrderSuccessModal from "../components/checkoutmodal/OderSuccess";
+import OrderSuccessModal from "../../components/checkoutmodal/OderSuccess";
 
 
 
 
+
+import { getCart } from "../../utils/cartUtils";
 
 export default function Checkout() {
     const [showSuccess, setShowSuccess] = useState(false);
+    const cartItems = getCart();
 
+    const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    const discount = subtotal * 0.2;
+    const deliveryFee = cartItems.length > 0 ? 15 : 0;
+    const total = subtotal - discount + deliveryFee;
 
     return (
         <div className="w-full font-poppins bg-white  sm:px-6 lg:px-20 xl:px-30 2xl:px-40 py-10">
             {/* Breadcrumb */}
-            <p className="text-xs text-[#00000099] mb-6">
-                Shop &nbsp;&gt;&nbsp; Cart &nbsp;&gt;&nbsp; <span className="text-[#000000]"> Checkout </span>
-            </p>
+            <nav className="flex items-center text-xs text-[#00000099] mb-6">
+                <Link to="/shop" className="hover:text-black">Shop</Link>
+                <span className="mx-2">&gt;</span>
+                <Link to="/cart" className="hover:text-black">Cart</Link>
+                <span className="mx-2">&gt;</span>
+                <span className="text-[#000000]"> Checkout </span>
+            </nav>
 
             <div className="w-full   grid grid-cols-1 px-8 lg:grid-cols-3 gap-10">
                 {/* LEFT: Billing Details */}
@@ -120,30 +132,30 @@ export default function Checkout() {
                 </div>
 
                 {/* RIGHT – ORDER SUMMARY */}
-                <div className=" w-full border border-[#0000001A] mt-18 rounded-xl p-6 h-fit">
-                    <h2 className="font-semibold mb-4">Order Summary</h2>
+                <div className=" w-full border border-[#0000001A] mt-18 rounded-xl p-6 h-fit bg-white shadow-sm">
+                    <h2 className="font-bold text-xl mb-6 border-b border-[#0000001A] pb-4">Order Summary</h2>
 
-                    <div className="space-y-3 text-sm">
+                    <div className="space-y-4 text-sm">
                         <div className="flex justify-between">
                             <span className="text-[#00000099]">Subtotal</span>
-                            <span className="text-[#000000] font-bold">$565</span>
+                            <span className="text-[#000000] font-bold">${subtotal.toFixed(2)}</span>
                         </div>
 
                         <div className="flex justify-between text-[#FF3333] ">
                             <span className="text-[#00000099]">Discount (-20%)</span>
-                            <span className=" font-bold">- $113</span>
+                            <span className=" font-bold">- ${discount.toFixed(2)}</span>
                         </div>
 
                         <div className="flex justify-between">
                             <span className="text-[#00000099]">Delivery Fee</span>
-                            <span className="text-[#000000] font-bold">$15</span>
+                            <span className="text-[#000000] font-bold">${deliveryFee.toFixed(2)}</span>
                         </div>
 
-                        <hr className="text-[#0000001A]" />
+                        <hr className="border-[#0000001A]" />
 
-                        <div className="flex text-[#000000] justify-between ">
-                            <span>Total</span>
-                            <span className="font-bold">$467</span>
+                        <div className="flex text-[#000000] justify-between text-lg">
+                            <span className="font-medium">Total</span>
+                            <span className="font-bold">${total.toFixed(2)}</span>
                         </div>
                     </div>
 

@@ -82,44 +82,44 @@ export default function Footer() {
       <div className="flex mt-12 items-center justify-center  flex-col gap-6 lg:flex-row md:flex-row lg:items-center lg:justify-between">
 
         <h3 className="w-full  font-bold 
-           text-lg sm:text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-xl
+           text-lg sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-2xl
              text-white">
           Get 10% off your first order plus expert dog health tips.
         </h3>
 
-       <div className="relative mt-10 w-full  ">
+        <div className="relative mt-10 w-full  ">
 
-  {/* OUTER GRADIENT BORDER */}
-  <div className="absolute inset-0 rounded-[18px] bg-[#FFFFFF]"></div>
+          {/* OUTER GRADIENT BORDER */}
+          <div className="absolute inset-0 rounded-[18px] bg-[#FFFFFF]"></div>
 
-  {/* INNER WHITE CARD */}
-  <div className="relative flex items-center bg-white/15 backdrop-blur-md rounded-[18px] border border-white px-4 ">
+          {/* INNER WHITE CARD */}
+          <div className="relative flex items-center bg-white/15 backdrop-blur-md rounded-[18px] border border-white px-4 ">
 
-    {/* TITLE LEFT */}
-    <h2 className="absolute -top-[1.8rem] left-1 text-white 
+            {/* TITLE LEFT */}
+            <h2 className="absolute -top-[1.8rem] left-1 text-white 
       text-sm tracking-wide">
-      Join the pack
-    </h2>
+              Join the pack
+            </h2>
 
-    {/* LABEL ABOVE INPUT */}
-    <p className="absolute bottom-10 left-4 text-[10px] tracking-widest uppercase font-semibold text-[#4A4A4A]">
-      Your Email
-    </p>
+            {/* LABEL ABOVE INPUT */}
+            <p className="absolute bottom-10 left-4 text-[10px] tracking-widest uppercase font-semibold text-[#4A4A4A]">
+              Your Email
+            </p>
 
-    {/* INPUT */}
-    <input
-      type="email"
-      placeholder="@gmail.com"
-      className="w-full mt-6 bg-transparent text-[#000000] placeholder-[#000000] text-[clamp(0.9rem,1vw,1.1rem)] outline-none"
-    />
+            {/* INPUT */}
+            <input
+              type="email"
+              placeholder="@gmail.com"
+              className="w-full mt-6 bg-transparent text-[#000000] placeholder-[#000000] text-[clamp(0.9rem,1vw,1.1rem)] outline-none"
+            />
 
-    {/* SEND BUTTON */}
-    <button className="ml-2 mt-6 text-[#000000] text-[clamp(1.4rem,2vw,2.2rem)] font-light">
-      →
-    </button>
+            {/* SEND BUTTON */}
+            <button className="ml-2 mt-6 text-[#000000] text-[clamp(1.4rem,2vw,2.2rem)] font-light">
+              →
+            </button>
 
-  </div>
-</div>
+          </div>
+        </div>
 
       </div>
 

@@ -1,17 +1,17 @@
 import React from "react";
 
 
-function DogCard() {
+function InfoSection() {
   return (
     <section className="w-full bg-white font-poppins py-8 sm:py-12 lg:py-16">
       <div className="w-full  px-4 sm:px-6 lg:px-8">
-        
+
         {/* MAIN ROW */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-8 sm:gap-12 ">
 
           {/* LEFT CONTENT */}
           <div className="flex-1 min-w-0">
-            
+
             <h1 className="text-[#D8A85B] text-[24px] md:text-[30px] lg:text-[30px] ">
               Why Choose Us ?
             </h1>
@@ -22,8 +22,8 @@ function DogCard() {
 
             {/* FEATURES */}
             <div className="mt-6  sm:mt-10 lg:mt-12 grid grid-cols-1 sm:grid-cols-2 gap-x-8 sm:gap-x-10 lg:gap-x-12 gap-y-6 sm:gap-y-8 lg:gap-y-10">
-              
-              {[ 
+
+              {[
                 ["EASE ALLERGIES", "Provides relief from environmental triggers."],
                 ["NATURAL INGREDIENTS", "Carefully selected, naturally nutritious ingredients."],
                 ["REDUCE ITCHING", "Soothes skin irritation and discomfort."],
@@ -64,4 +64,4 @@ function DogCard() {
   );
 }
 
-export default DogCard;
+export default InfoSection;

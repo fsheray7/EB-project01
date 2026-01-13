@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Banner() {
   return (
@@ -70,7 +71,7 @@ function Banner() {
             "
           >
             Premium, science-backed supplements for your dog.
-           
+
           </p>
           <p
             className="
@@ -88,7 +89,7 @@ function Banner() {
             Subscribe today and save 15% on every order.
           </p>
 
-          <button
+          <Link to="/shop"
             className="
               mt-8
               inline-flex items-center gap-2
@@ -109,8 +110,8 @@ function Banner() {
               
             "
           >
-            Shop Now <FaArrowRight className="text-lg text-[#D8A85B]" /> 
-          </button>
+            Shop Now <FaArrowRight className="text-lg text-[#D8A85B]" />
+          </Link>
         </div>
       </div>
 

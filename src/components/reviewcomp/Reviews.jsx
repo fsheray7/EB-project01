@@ -67,13 +67,13 @@ export default function ReviewsSection() {
           <button className="p-3 rounded-full  bg-[#F0F0F0]">
             <HiAdjustmentsVertical className="text-lg" />
           </button>
-            <div className="px-4 py-2 bg-[#F0F0F0] rounded-full  text-sm">
+          <div className="px-4 py-2 bg-[#F0F0F0] rounded-full  text-sm">
 
-          <select className=" bg-[#F0F0F0] rounded-full text-sm">
-            <option>Latest</option>
-            <option>Oldest</option>
-          </select>
-            </div>
+            <select className=" bg-[#F0F0F0] rounded-full text-sm">
+              <option>Latest</option>
+              <option>Oldest</option>
+            </select>
+          </div>
 
           <button className="px-4 py-2 rounded-full bg-black text-white text-sm">
             Write a Review
@@ -92,8 +92,10 @@ export default function ReviewsSection() {
             {/* TOP */}
             <div className="flex justify-between items-center mb-2">
               <div className="flex items-center gap-2">
-                <span className=" flex text-[#D8A85B] text-sm">
-                  {Array(review.rating).fill(star)}
+                <span className="flex text-[#D8A85B] text-sm">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <FaStar key={i} />
+                  ))}
                 </span>
               </div>
               <span className="text-gray-400">•••</span>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 
 import Profile from "./Profile";
 import AddressBook from "./AddressBook";
@@ -15,13 +15,13 @@ export default function MyAccount() {
   const location = useLocation();
 
   // Determine active page based on the current URL path
-  const activePage = 
-      location.pathname === "/address" ? "address" 
-    : location.pathname === "/payment" ? "payment" :
-    location.pathname === "/subscription-active" ? "subscription-active"
-    : location.pathname === "/subscription-paused" ? "subscription-paused"
-    : location.pathname === "/subscription-cancelled" ? "subscription-cancelled"
-    : "profile";
+  const activePage =
+    location.pathname === "/address" ? "address"
+      : location.pathname === "/payment" ? "payment" :
+        location.pathname === "/subscription-active" ? "subscription-active"
+          : location.pathname === "/subscription-paused" ? "subscription-paused"
+            : location.pathname === "/subscription-cancelled" ? "subscription-cancelled"
+              : "profile";
 
   const renderContent = () => {
     switch (activePage) {
@@ -31,12 +31,12 @@ export default function MyAccount() {
         return <AddressBook />;
       case "payment":
         return <PaymentOptions />;
-        case "subscription-active":
-          return <ActiveSubscriptions />;
-          case "subscription-paused":
-          return <PausedSubscriptions />;
-          case "subscription-cancelled":
-          return <CancelledSubscriptions />;
+      case "subscription-active":
+        return <ActiveSubscriptions />;
+      case "subscription-paused":
+        return <PausedSubscriptions />;
+      case "subscription-cancelled":
+        return <CancelledSubscriptions />;
 
       default:
         return <Profile />;
@@ -46,9 +46,11 @@ export default function MyAccount() {
   return (
     <div className="w-full flex flex-col font-poppins bg-white px-4 sm:px-6 lg:px-10 py-8">
       {/* Breadcrumb */}
-      <p className="text-md text-[#00000099] mb-6">
-        Home &nbsp;&gt;&nbsp; <span className="text-[#000000]">My Account</span>
-      </p>
+      <nav className="flex items-center text-md text-[#00000099] mb-6">
+        <Link to="/" className="hover:text-black">Home</Link>
+        <span className="mx-2">&gt;</span>
+        <span className="text-[#000000]">My Account</span>
+      </nav>
 
       {/* Mobile Sidebar Toggle */}
       <div className="lg:hidden mb-4">
@@ -64,9 +66,8 @@ export default function MyAccount() {
       <div className="w-full grid grid-cols-1 lg:grid-cols-4 gap-10">
         {/* ===== STATIC SIDEBAR ===== */}
         <aside
-          className={`lg:col-span-1 ${
-            isSidebarOpen ? "block" : "hidden"
-          } lg:block`}
+          className={`lg:col-span-1 ${isSidebarOpen ? "block" : "hidden"
+            } lg:block`}
         >
           <div className="space-y-6">
             {/* Manage Account */}
@@ -81,11 +82,10 @@ export default function MyAccount() {
                     navigate("/profile");
                     setIsSidebarOpen(false);
                   }}
-                  className={`cursor-pointer ${
-                    activePage === "profile"
+                  className={`cursor-pointer ${activePage === "profile"
                       ? "text-[#D8A85B] font-medium"
                       : "text-[#4A4A4A]"
-                  }`}
+                    }`}
                 >
                   My Profile
                 </li>
@@ -95,11 +95,10 @@ export default function MyAccount() {
                     navigate("/address");
                     setIsSidebarOpen(false);
                   }}
-                  className={`cursor-pointer ${
-                    activePage === "address"
+                  className={`cursor-pointer ${activePage === "address"
                       ? "text-[#D8A85B] font-medium"
                       : "text-[#4A4A4A]"
-                  }`}
+                    }`}
                 >
                   Address Book
                 </li>
@@ -109,11 +108,10 @@ export default function MyAccount() {
                     navigate("/payment");
                     setIsSidebarOpen(false);
                   }}
-                  className={`cursor-pointer ${
-                    activePage === "payment"
+                  className={`cursor-pointer ${activePage === "payment"
                       ? "text-[#D8A85B] font-medium"
                       : "text-[#4A4A4A]"
-                  }`}
+                    }`}
                 >
                   My Payment Options
                 </li>
@@ -126,34 +124,31 @@ export default function MyAccount() {
                 My Subscriptions
               </h4>
               <ul className="space-y-1 text-sm text-[#4A4A4A] cursor-pointer">
-                <li  onClick={() => {
-                    navigate("/subscription-active");
-                    setIsSidebarOpen(false);
-                  }}
-                  className={`cursor-pointer ${
-                    activePage === "subscription-active"
+                <li onClick={() => {
+                  navigate("/subscription-active");
+                  setIsSidebarOpen(false);
+                }}
+                  className={`cursor-pointer ${activePage === "subscription-active"
                       ? "text-[#D8A85B] font-medium"
                       : "text-[#4A4A4A]"
-                  }`}>Active</li>
+                    }`}>Active</li>
 
                 <li onClick={() => {
-                    navigate("/subscription-paused");
-                    setIsSidebarOpen(false);
-                  }}
-                  className={`cursor-pointer ${
-                    activePage === "subscription-paused"
+                  navigate("/subscription-paused");
+                  setIsSidebarOpen(false);
+                }}
+                  className={`cursor-pointer ${activePage === "subscription-paused"
                       ? "text-[#D8A85B] font-medium"
                       : "text-[#4A4A4A]"
-                  }`} >Paused</li>
+                    }`} >Paused</li>
 
                 <li onClick={() => {
                   navigate("/subscription-cancelled");
                   setIsSidebarOpen(false);
-                }} className={`cursor-pointer ${
-                  activePage === "subscription-cancelled"
+                }} className={`cursor-pointer ${activePage === "subscription-cancelled"
                     ? "text-[#D8A85B] font-medium"
                     : "text-[#4A4A4A]"
-                }`}>Cancelled</li>
+                  }`}>Cancelled</li>
               </ul>
             </div>
           </div>

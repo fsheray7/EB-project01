@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import ProductToolbar from "../components/ProductToolbar";
-import blogs from "../data/blogs.js";
+import ProductToolbar from "../../components/productsection/ProductToolbar.jsx";
+import blogs from "../../data/blogs.js";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import BlogCard from "../components/card/BlogCard.jsx";
+import BlogCard from "../../components/card/BlogCard.jsx";
 
 export default function Blogs() {
   const [query, setQuery] = useState("");
@@ -41,7 +41,7 @@ export default function Blogs() {
         </h2>
         <p className="mt-2 text-xs md:text-base md:px-20 lg:px-20 xl:px-20 text-sm text-[#000000]">
           Explore our articles for expert advice, heartwarming stories, and the latest in canine
-health and happiness.
+          health and happiness.
         </p>
       </div>
 

@@ -1,18 +1,19 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { FaEye } from "react-icons/fa";
-import ProductCard from "./card/ProductCard";
-import products from "../data/products";
+import ProductCard from "../card/ProductCard";
+import products from "../../data/products";
+import { Link } from "react-router-dom";
 
 
 
-export default function FeaturedProducts(product) {
+export default function Products({ limit }) {
   const [query, setQuery] = useState("");
   const [view, setView] = useState("grid");
   const [sortedProducts, setSortedProducts] = useState(products);
 
-  const filtered = sortedProducts.filter((p) =>
-    p.title.toLowerCase().includes(query.toLowerCase())
-  );
+  const filtered = sortedProducts
+    .filter((p) => p.title.toLowerCase().includes(query.toLowerCase()))
+    .slice(0, limit || sortedProducts.length);
 
   const handleSort = (type) => {
     const sorted = [...sortedProducts].sort((a, b) => {
@@ -48,8 +49,8 @@ export default function FeaturedProducts(product) {
           Featured Product
         </h2>
 
-        <a
-          href="#"
+        <Link
+          to="/shop"
           className="
             flex items-center gap-1
             text-[#000000] font-semibold
@@ -57,23 +58,22 @@ export default function FeaturedProducts(product) {
           "
         >
           View all →
-        </a>
+        </Link>
       </div>
 
       {/* Cards */}
-     
+
 
       <div
-              className={`mt-8 grid gap-6 ${
-                view === "grid"
-                  ? "grid-cols-1 sm:grid-cols-3 lg:grid-cols-4"
-                  : "grid-cols-1"
-              }`}
-            >
-              {filtered.map((item) => (
-                <ProductCard key={item.id} product={item} />
-              ))}
-            </div>
+        className={`mt-8 grid gap-6 ${view === "grid"
+          ? "xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4"
+          : "grid-cols-1"
+          }`}
+      >
+        {filtered.map((item) => (
+          <ProductCard key={item.id} product={item} />
+        ))}
+      </div>
     </section>
   );
 }

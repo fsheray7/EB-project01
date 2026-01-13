@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import blogs from "../data/blogs.js";
+import blogs from "../../data/blogs.js";
 
 import { CiInstagram } from "react-icons/ci";
-import {  FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import { IoIosLink } from "react-icons/io";
 
 import { AiOutlineFacebook } from "react-icons/ai";
@@ -13,7 +13,7 @@ export default function BlogDetail() {
   const { slug } = useParams();
   const blog = blogs.find((b) => b.slug === slug);
 
-  
+
 
   return (
     <main className="w-full font-poppins px-6 md:px-20 lg:px-20 xl:px-20 2xl:px-20 py-15">
@@ -34,23 +34,23 @@ export default function BlogDetail() {
 
       <div className="flex items-center bg-[#F4F4F4] px-4 py-2 rounded-xl justify-between mt-4 space-x-2">
 
-      {/* Read Time */}
-      <span className="  text-xs   py-1  font-medium text-[#757575]">
-        {blog.readTime}
-      </span>
+        {/* Read Time */}
+        <span className="  text-xs   py-1  font-medium text-[#757575]">
+          {blog.readTime}
+        </span>
 
-      {/* ICONS */}
-      <div className="flex text-[#757575] text-xl gap-2 md:gap-4 lg:gap-4 xl:gap-4 2xl:gap-4">
+        {/* ICONS */}
+        <div className="flex text-[#757575] text-xl gap-2 md:gap-4 lg:gap-4 xl:gap-4 2xl:gap-4">
 
-      <CiInstagram  />
-      {/* Facebook Icon */}
-        <AiOutlineFacebook   />
+          <CiInstagram />
+          {/* Facebook Icon */}
+          <AiOutlineFacebook />
 
-        <RiTwitterXFill  />
+          <RiTwitterXFill />
 
-        <IoIosLink  />
-      </div>
-      
+          <IoIosLink />
+        </div>
+
       </div>
 
       {/* Feature Image */}
@@ -65,7 +65,7 @@ export default function BlogDetail() {
 
       {/* Content */}
       <div className="mt-6 flex items-center gap-6 font-semibold text-[#212121] text-sm leading-relaxed  whitespace-pre-line">
-        <img src="/blogs/verticle.png" alt="verticle image"  className="h-10 md:h-6 lg:h-6 xl:h-6 2xl:h-6 mt-5 "/>
+        <img src="/blogs/verticle.png" alt="verticle image" className="h-10 md:h-6 lg:h-6 xl:h-6 2xl:h-6 mt-5 " />
         {blog.content}
       </div>
     </main>
