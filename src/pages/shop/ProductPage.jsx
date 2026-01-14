@@ -24,7 +24,7 @@ export default function ProductPage() {
   // Update display image if product changes
   React.useEffect(() => {
     if (product) {
-      setDisplayImage("/purchaisingpic/image1.jpg");
+      setDisplayImage("/purchaisingpic/image1.png");
     }
   }, [product]);
 
