@@ -80,7 +80,7 @@ export default function Products() {
       {/* PRODUCTS GRID */}
       <div
         className={`mt-8 grid gap-6 ${view === "grid"
-          ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+          ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           : "grid-cols-1"
           }`}
       >
@@ -91,7 +91,7 @@ export default function Products() {
 
       {/* PAGINATION */}
       {totalPages > 1 && (
-        <div className="mt-10 flex items-center justify-between text-sm px-4 gap-4 text-gray-600">
+        <div className="mt-10 w-full flex items-center justify-between text-sm px-4 gap-4 text-gray-600">
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
@@ -100,16 +100,44 @@ export default function Products() {
             <FaArrowLeft /> Previous
           </button>
 
-          <div className="flex items-center gap-4">
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-              <span
-                key={page}
-                onClick={() => handlePageChange(page)}
-                className={`cursor-pointer px-3 py-1 rounded ${currentPage === page ? "font-medium bg-gray-200 text-black" : "hover:bg-gray-100"}`}
-              >
-                {page}
-              </span>
-            ))}
+          <div className="flex items-center gap-2">
+            {/* Mobile Pagination */}
+            <div className="md:hidden flex items-center gap-2">
+              {(() => {
+                const pages = [];
+                if (totalPages >= 1) {
+                  if (currentPage === 1) {
+                    pages.push(1);
+                    if (totalPages >= 2) pages.push(2);
+                  } else {
+                    pages.push(currentPage - 1);
+                    pages.push(currentPage);
+                  }
+                }
+                return pages.map((page) => (
+                  <span
+                    key={page}
+                    onClick={() => handlePageChange(page)}
+                    className={`cursor-pointer px-3 py-1 rounded ${currentPage === page ? "font-medium bg-gray-200 text-black" : "hover:bg-gray-100"}`}
+                  >
+                    {page}
+                  </span>
+                ));
+              })()}
+            </div>
+
+            {/* Desktop Pagination */}
+            <div className="hidden md:flex items-center gap-2">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <span
+                  key={page}
+                  onClick={() => handlePageChange(page)}
+                  className={`cursor-pointer px-3 py-1 rounded ${currentPage === page ? "font-medium bg-gray-200 text-black" : "hover:bg-gray-100"}`}
+                >
+                  {page}
+                </span>
+              ))}
+            </div>
           </div>
 
           <button

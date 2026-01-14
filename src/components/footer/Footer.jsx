@@ -5,7 +5,7 @@ import { FaFacebookF, FaWhatsapp, FaAmazon } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className=" mt-4 w-full font-poppins bg-[url({bgImg})] bg-cover bg-center bg-no-repeatpx-4 py-10 px-8"
+    <footer className="w-full font-poppins bg-[url({bgImg})] bg-cover bg-center bg-no-repeatpx-4 py-10 px-8"
       style={{ backgroundImage: `url("/footer/gradientBg.png")` }}>
 
       {/* MAIN FOOTER CARD */}
